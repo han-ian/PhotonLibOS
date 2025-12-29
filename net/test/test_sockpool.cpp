@@ -38,8 +38,8 @@ TEST(Socket, pooled) {
         char buf[4];
         int i=0;
         while (stream->read(buf, 4) > 0){ i ++; stream->write("TEST", 4); break;}
-        photon::thread_sleep(10);
-        stream->close();  // close socket, so client get READ event.
+        photon::thread_sleep(2);
+        stream->close();  // close socket, so client get READ/HUP event.
         return 0;
     };
     server->set_handler(handler);

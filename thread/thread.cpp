@@ -775,6 +775,7 @@ R"(
     );
 
     inline void switch_context(thread* from, thread* to) {
+        LOG_TEMP("switch context, from: `, to: `", from, to);
         ASAN_SWITCH(to);
         prepare_switch(from, to);
         auto _t_ = to->stack.pointer_ref();

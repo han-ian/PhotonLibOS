@@ -145,7 +145,7 @@ protected:
 
     ISocketStream* get_from_pool(const EndPoint& ep) {
         static int i = 0;
-        if(i++ % 5 == 0){
+        if(i++ % 1 == 0){
             return nullptr;
         }
         auto it = fdmap.find(ep);
@@ -165,7 +165,7 @@ protected:
     }
 
     void drop_from_pool(StreamListNode* node) {
-        LOG_DEBUG("drop_from_pool");
+        LOG_TEMP("drop_from_pool begin");
 
         // or node have no record
         auto it = fdmap.find(node->key);
@@ -173,6 +173,8 @@ protected:
         list.erase(node);
         if (list.empty()) fdmap.erase(it);
         rm_watch(node);
+        delete node;
+        LOG_TEMP("drop_from_pool end");
     }
 
 public:
@@ -263,7 +265,7 @@ public:
                 // socket shutdown
                 drop_from_pool(nodes[i]);
             }
-            for (int i = 0; i < ret; i++) delete nodes[i];
+            // for (int i = 0; i < ret; i++) delete nodes[i];
         }
     }
 };
