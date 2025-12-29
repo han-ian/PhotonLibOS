@@ -293,6 +293,7 @@ ok:     entry.interests |= eint;
     virtual int cancel_wait() override { return eventfd_write(_evfd, 1); }
 
     int wait_for_fd(int fd, uint32_t interest, Timeout timeout) override {
+        LOG_TEMP("wait_for_fd, `, interest: `", fd, interest);
         if (fd < 0)
             LOG_ERROR_RETURN(EINVAL, -1, "invalid fd");
         if (interest & (interest-1))
@@ -302,6 +303,7 @@ ok:     entry.interests |= eint;
         int ret = add_interest({fd, interest | ONE_SHOT, CURRENT});
         if (ret < 0) LOG_ERROR_RETURN(0, -1, "failed to add event interest");
         SCOPED_PAUSE_WORK_STEALING;
+        LOG_TEMP("thread_usleep");
         ret = thread_usleep(timeout);
         ERRNO err;
         if (ret == -1 && err.no == EOK) {

@@ -135,11 +135,11 @@ protected:
     }
 
     void rm_watch(StreamListNode* node) {
-        static int i = 0;
-        if(i++ % 5 == 0){
-            LOG_WARN("skip rm_watch");
-            return;
-        }
+        // static int i = 0;
+        // // if(i++ % 5 == 0){
+        // //     LOG_WARN("skip rm_watch");
+        // //     return;
+        // // }
         if (node->fd >= 0) ev->rm_interest({node->fd, EVENT_READ, node});
     }
 

@@ -1,0 +1,206 @@
+# path name: /usr/local/lib/libgflags.so.2.1.2
+# build-id: d352cbdd3902e299ee9ba8f680783a3779aac531
+F: 7090 _GLOBAL__sub_I_gflags_reporting.cc
+L: 441 src/gflags_reporting.cc
+F: 7340 _GLOBAL__sub_I_gflags_completions.cc
+L: 769 src/gflags_completions.cc
+F: 8b20 google::GetArgvs::cxx11
+L: 1487 src/gflags.cc
+R: @retval/p
+F: 8b30 google::GetArgv
+L: 1488 src/gflags.cc
+R: @retval/s
+F: 8b40 google::GetArgv0
+L: 1489 src/gflags.cc
+R: @retval/s
+F: 8b50 google::GetArgvSum
+L: 1490 src/gflags.cc
+R: @retval
+F: 8b60 google::ProgramInvocationName
+L: 1491 src/gflags.cc
+R: @retval/s
+F: 8b70 google::ProgramInvocationShortName
+L: 1494 src/gflags.cc
+R: @retval/s
+F: 8ba0 google::SetUsageMessage
+L: 1502 src/gflags.cc
+A: @arg1/p%rdi
+F: 8bd0 google::ProgramUsage
+L: 1508 src/gflags.cc
+R: @retval/s
+F: 8bf0 google::SetVersionString
+L: 1522 src/gflags.cc
+A: @arg1/p%rdi
+F: 8c20 google::VersionString
+L: 1528 src/gflags.cc
+R: @retval/s
+F: 95c0 google::StringFromEnv
+L: 1820 src/gflags.cc
+A: @arg1/s%rdi,arg2/s%rsi
+R: @retval/s
+F: 95e0 google::RegisterFlagValidator
+L: 1841 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 95f0 google::RegisterFlagValidator
+L: 1845 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 9600 google::RegisterFlagValidator
+L: 1849 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 9610 google::RegisterFlagValidator
+L: 1853 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 9620 google::RegisterFlagValidator
+L: 1857 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 9630 google::RegisterFlagValidator
+L: 1861 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 9640 google::AllowCommandLineReparsing
+L: 1933 src/gflags.cc
+F: 9650 google::ShutDownCommandLineFlags
+L: 1952 src/gflags.cc
+F: 96f0 std::__cxx11::basic_string::basic_string
+L: 518 /usr/include/c++/8/bits/basic_string.h
+A: @arg1/p%rdi,arg2/s%rsi,arg3/p
+F: b710 google::SetCommandLineOption::cxx11
+L: 1608 src/gflags.cc
+A: @arg1/s%rsi,arg2/s%rdx
+R: @retval/S
+F: d4e0 google::ParseCommandLineFlags
+L: 1911 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi,arg3%rdx
+R: @retval
+F: d4f0 google::ParseCommandLineNonHelpFlags
+L: 1915 src/gflags.cc
+A: @arg1/p%rdi,arg2/p%rsi,arg3%rdx
+R: @retval
+F: e2a0 std::vector::~vector
+L: 565 /usr/include/c++/8/bits/stl_vector.h
+F: e300 gflags_mutex_namespace::Mutex::~Mutex
+L: 264 src/mutex.h
+A: @arg1/p%rdi
+F: e330 gflags_mutex_namespace::Mutex::Unlock
+L: 266 src/mutex.h
+A: @arg1/p%rdi
+F: e360 google::InternalStringPrintf
+L: 274 src/util.h
+F: e490 google::StringAppendF
+L: 325 src/util.h
+F: e520 google::StringPrintf::cxx11
+L: 332 src/util.h
+F: e5f0 google::CommandLineFlagInfo::~CommandLineFlagInfo
+L: 154 include/gflags/gflags.h
+A: @arg1/p%rdi
+F: e680 google::CommandLineFlagInfo::CommandLineFlagInfo
+L: 186 /usr/include/c++/8/bits/basic_string.h
+A: @arg1/p%rdi,arg2/p%rsi
+F: e8d0 std::operator+
+L: 6032 /usr/include/c++/8/bits/basic_string.h
+A: @arg1/p%rsi,arg2/s%rdx
+F: e960 std::vector::~vector
+L: 565 /usr/include/c++/8/bits/stl_vector.h
+F: ea30 std::_Rb_tree::_M_erase
+L: 1877 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi
+F: eaa0 std::_Rb_tree::find
+L: 2543 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval/t8:_Rb_tree_iterator
+F: eb90 std::vector::_M_realloc_insert
+L: 413 /usr/include/c++/8/bits/vector.tcc
+F: ee00 std::vector::emplace_back
+L: 100 /usr/include/c++/8/bits/vector.tcc
+F: ee70 std::_Rb_tree::_M_insert_node
+L: 2320 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx,arg4/p%rcx
+R: @retval/t8:_Rb_tree_iterator
+F: ef20 std::__cxx11::basic_string::_M_construct
+L: 206 /usr/include/c++/8/bits/basic_string.tcc
+F: efd0 std::__cxx11::basic_string::_M_construct
+L: 206 /usr/include/c++/8/bits/basic_string.tcc
+F: f080 std::vector::_M_realloc_insert
+L: 413 /usr/include/c++/8/bits/vector.tcc
+A: @arg1/p%rdi,arg2/t8:__normal_iterator%rsi
+F: f9b0 std::_Rb_tree::_M_get_insert_unique_pos
+L: 2051 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval/t16:pair
+F: fb20 std::_Rb_tree::_M_get_insert_hint_unique_pos
+L: 2153 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/t8:_Rb_tree_const_iterator%rsi,arg3/p%rdx
+R: @retval/t16:pair
+F: fc90 std::_Rb_tree::_M_emplace_hint_unique
+L: 2418 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/t8:_Rb_tree_const_iterator%rsi
+R: @retval/t8:_Rb_tree_iterator
+F: fd80 std::map::operator[]
+L: 490 /usr/include/c++/8/bits/stl_map.h
+A: @arg1/p%rdi,arg2/p%rsi
+F: feb0 std::_Rb_tree::_M_emplace_hint_unique
+L: 2418 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/t8:_Rb_tree_const_iterator%rsi
+R: @retval/t8:_Rb_tree_iterator
+F: ff90 std::map::operator[]
+L: 510 /usr/include/c++/8/bits/stl_map.h
+A: @arg1/p%rdi,arg2/p%rsi
+F: 100c0 google::CommandLineFlagInfo::operator=
+L: 154 include/gflags/gflags.h
+A: @arg1/p%rdi,arg2/p
+F: 10640 std::__unguarded_linear_insert
+L: 1821 /usr/include/c++/8/bits/stl_algo.h
+A: @arg1/t8:__normal_iterator%rdi,arg2/t1:_Val_comp_iter%stack+1
+F: 11270 std::__insertion_sort
+L: 1843 /usr/include/c++/8/bits/stl_algo.h
+A: @arg1/t8:__normal_iterator%rdi,arg2/t8:__normal_iterator%rsi,arg3/t1:_Iter_comp_iter%stack+1
+F: 11f90 std::__adjust_heap
+L: 214 /usr/include/c++/8/bits/stl_heap.h
+A: @arg1/t8:__normal_iterator%rdi,arg2%rsi,arg3%rdx,arg4/t208:CommandLineFlagInfo%RCX,arg5/t1:_Iter_comp_iter%stack+1
+F: 13550 std::__make_heap
+L: 969 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/t8:__normal_iterator%rdi,arg2/t8:__normal_iterator%rsi,arg3/p%rdx
+F: 13d10 std::__pop_heap
+L: 243 /usr/include/c++/8/bits/stl_heap.h
+A: @arg1/t8:__normal_iterator%rdi,arg2/t8:__normal_iterator%rsi,arg3/t8:__normal_iterator%rdx,arg4/p%RCX
+F: 14400 std::__introsort_loop
+L: 1940 /usr/include/c++/8/bits/stl_algo.h
+A: @arg1/t8:__normal_iterator%rdi,arg2/t8:__normal_iterator%rsi,arg3%rdx,arg4/t1:_Iter_comp_iter%stack+1
+F: 193d0 google::ShowUsageWithFlags
+L: 306 src/gflags_reporting.cc
+A: @arg1/s%rdi
+F: 1a2c0 google::SStringPrintf
+L: 317 src/util.h
+F: 1a360 std::vector::_M_realloc_insert
+L: 413 /usr/include/c++/8/bits/vector.tcc
+A: @arg1/p%rdi,arg2/t8:__normal_iterator%rsi
+F: 1d0a0 google::HandleCommandLineCompletions
+L: 1036 /usr/include/c++/8/bits/basic_string.h
+F: 1d0e0 std::operator+
+L: 1157 /usr/include/c++/8/bits/basic_string.tcc
+A: @arg1/s%rsi,arg2/p%rdx
+R: @retval/S
+F: 1d190 std::_Rb_tree::_M_erase
+L: 1877 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi
+F: 1d1d0 std::_Rb_tree::find
+L: 2559 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval/t8:_Rb_tree_const_iterator
+F: 1d220 std::_Rb_tree::_M_get_insert_unique_pos
+L: 2051 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval/t16:pair
+F: 1d2b0 std::_Rb_tree::_M_insert_unique
+L: 2105 /usr/include/c++/8/bits/stl_tree.h
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval/t16:pair
+F: 1d360 std::operator+
+L: 5931 /usr/include/c++/8/bits/basic_string.h
+A: @arg1/p%rsi,arg2/p%rdx
+R: @retval/S

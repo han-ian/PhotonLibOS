@@ -1,0 +1,2414 @@
+# path name: /root/codes.ali/PhotonLibOS.dev/build/output/test-sockpool
+# build-id: 6d50b8e63a0d9a978b39584b139cf5f9e57e3891
+E: enum _Ios_Openmode {_S_ios_openmode_min=-2147483648,_S_app=1,_S_ate,_S_bin=4,_S_in=8,_S_out=16,_S_trunc=32,_S_ios_openmode_end=65536,_S_ios_openmode_max=2147483647}
+F: 9e66 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 9e72 task::$_0::operator()
+L: 18 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 9e93 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 9ea0 task::$_1::operator()::$_0::operator()
+L: 18 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 9ec2 task::$_1::operator()
+L: 18 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: 9fb8 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 9fd0 task
+L: 9 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p,arg2/t18:EndPoint%stack+1
+F: a35e ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: a36a Socket_pooled_Test::TestBody::$_0::operator()::$_0::operator()
+L: 35 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: a38b ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: a398 Socket_pooled_Test::TestBody::$_0::operator()::$_1::operator()::$_0::operator()
+L: 35 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: a3ba Socket_pooled_Test::TestBody::$_0::operator()::$_1::operator()
+L: 35 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: a46b std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: a483 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: a490 Socket_pooled_Test::TestBody::$_0::operator()::$_2::operator()::$_0::operator()
+L: 36 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: a4b1 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: a4be Socket_pooled_Test::TestBody::$_0::operator()::$_2::operator()::$_1::operator()::$_0::operator()
+L: 36 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: a4e0 Socket_pooled_Test::TestBody::$_0::operator()::$_2::operator()::$_1::operator()
+L: 36 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: a591 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: a5aa Socket_pooled_Test::TestBody::$_0::operator()
+L: 34 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p,arg2/p
+R: @retval
+F: a99a Socket_pooled_Test::TestBody
+L: 29 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: ad6f ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: ad7c Socket_pooled_multisock_Test::TestBody::$_0::operator()::$_0::operator()
+L: 62 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: ad9d ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: adaa Socket_pooled_multisock_Test::TestBody::$_0::operator()::$_1::operator()::$_0::operator()
+L: 62 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: adcc Socket_pooled_multisock_Test::TestBody::$_0::operator()::$_1::operator()
+L: 62 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: ae7d std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: ae95 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: aea2 Socket_pooled_multisock_Test::TestBody::$_0::operator()::$_2::operator()::$_0::operator()
+L: 63 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: aec3 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: aed0 Socket_pooled_multisock_Test::TestBody::$_0::operator()::$_2::operator()::$_1::operator()::$_0::operator()
+L: 63 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: aef2 Socket_pooled_multisock_Test::TestBody::$_0::operator()::$_2::operator()::$_1::operator()
+L: 63 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: afa3 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: afbc Socket_pooled_multisock_Test::TestBody::$_0::operator()
+L: 61 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p,arg2/p
+R: @retval
+F: b378 Socket_pooled_multisock_Test::TestBody
+L: 56 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: b827 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: b834 Socket_pooled_multisock_serverclose_Test::TestBody::$_0::operator()::$_0::operator()
+L: 93 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: b855 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: b862 Socket_pooled_multisock_serverclose_Test::TestBody::$_0::operator()::$_1::operator()::$_0::operator()
+L: 93 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: b884 Socket_pooled_multisock_serverclose_Test::TestBody::$_0::operator()::$_1::operator()
+L: 93 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: b935 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: b94d ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: b95a Socket_pooled_multisock_serverclose_Test::TestBody::$_0::operator()::$_2::operator()::$_0::operator()
+L: 94 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: b97b ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: b988 Socket_pooled_multisock_serverclose_Test::TestBody::$_0::operator()::$_2::operator()::$_1::operator()::$_0::operator()
+L: 94 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: b9aa Socket_pooled_multisock_serverclose_Test::TestBody::$_0::operator()::$_2::operator()::$_1::operator()
+L: 94 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: ba5b std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: ba74 Socket_pooled_multisock_serverclose_Test::TestBody::$_0::operator()
+L: 92 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p,arg2/p
+R: @retval
+F: be62 Socket_pooled_multisock_serverclose_Test::TestBody
+L: 87 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: c311 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: c31e stask::$_0::operator()
+L: 134 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: c33f ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: c34c stask::$_1::operator()::$_0::operator()
+L: 134 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: c36e stask::$_1::operator()
+L: 134 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: c464 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: c47c stask
+L: 126 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p,arg2/t18:EndPoint%stack+1
+F: c7f0 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: c7fc Socket_pooled_expiration_Test::TestBody::$_1::operator()::$_0::operator()
+L: 151 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: c81d ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: c82a Socket_pooled_expiration_Test::TestBody::$_1::operator()::$_1::operator()::$_0::operator()
+L: 151 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: c84c Socket_pooled_expiration_Test::TestBody::$_1::operator()::$_1::operator()
+L: 151 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: c8fd std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: c915 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: c922 Socket_pooled_expiration_Test::TestBody::$_1::operator()::$_2::operator()::$_0::operator()
+L: 152 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: c943 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: c950 Socket_pooled_expiration_Test::TestBody::$_1::operator()::$_2::operator()::$_1::operator()::$_0::operator()
+L: 152 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: c972 Socket_pooled_expiration_Test::TestBody::$_1::operator()::$_2::operator()::$_1::operator()
+L: 152 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: ca23 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: ca3c Socket_pooled_expiration_Test::TestBody::$_1::operator()
+L: 150 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p,arg2/p
+R: @retval
+F: ce3c Socket_pooled_expiration_Test::TestBody
+L: 144 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: d454 main
+L: 188 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1,arg2/p
+R: @retval
+F: d4fe std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d56d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d5dd std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d64e Delegate::Delegate
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p
+F: d69d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d70d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d77e Delegate::Delegate
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p
+F: d7cd std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d83d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d8ae Delegate::Delegate
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p
+F: d8fd std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d96d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: d9dd std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: da4e Delegate::Delegate
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p
+F: da9e Delegate::bind
+L: 92 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p,arg3/p
+F: daf6 Delegate::bind
+L: 92 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p,arg3/p
+F: db4e Delegate::bind
+L: 92 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p,arg3/p
+F: dba6 Delegate::bind
+L: 92 /root/codes.ali/PhotonLibOS.dev/include/photon/common/callback.h
+A: @arg1/p,arg2/p,arg3/p
+F: dbfd photon::__stub11
+L: 29 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p
+R: @retval/p
+F: dc62 get_member_function_address
+L: 81 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: dc9e get_member_function_address
+L: 81 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: dcda get_member_function_address
+L: 81 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: dd16 get_member_function_address
+L: 81 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: dd52 photon::__stub11
+L: 29 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p
+R: @retval/p
+F: ddb7 photon::__stub11
+L: 29 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p
+R: @retval/p
+F: ded8 __get_mfa__
+L: 30 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: e004 __get_mfa__
+L: 30 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: e073 photon::__stub11
+L: 29 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p
+R: @retval/p
+F: e194 __get_mfa__
+L: 30 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: e2c0 __get_mfa__
+L: 30 /root/codes.ali/PhotonLibOS.dev/include/photon/common/PMF.h
+A: @arg1/p%RDI,arg2/p%RSI
+R: @retval/t16:pmf_map
+F: e32f photon::__stub11
+L: 29 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p
+R: @retval/p
+F: e394 __static_initialization_and_destruction_0
+L: 195 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1,arg2
+F: e87f operator new
+L: 168 /usr/include/c++/8/new
+A: @arg1,arg2/p
+R: @retval/p
+F: e89c ALogInteger::shift
+L: 106 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/c
+F: e8b8 ALogInteger::width
+L: 111 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/c
+R: @retval/p
+F: e8e0 ALogInteger::padding
+L: 112 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/c
+R: @retval/p
+F: e908 ALogString::ALogString
+L: 179 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: e93c ALogBuffer::consume
+L: 220 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: e980 LogFormatter::put
+L: 269 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p,arg3/p
+F: e9dc LogFormatter::put
+L: 291 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p,arg3/t16:ALogInteger
+F: ea56 LogFormatter::put_integer
+L: 317 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p,arg3
+F: eae6 LogBuffer::LogBuffer
+L: 353 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: eb26 LogBuffer::printf
+L: 379 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: eb3e photon::net::IPAddr::IPAddr
+L: 53 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+A: @arg1/p
+F: eb80 photon::net::IPAddr::IPAddr
+L: 72 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+A: @arg1/p,arg2
+F: ebbc photon::net::IPAddr::V4Loopback
+L: 138 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+R: @retval/t16:IPAddr
+F: ebee photon::net::IPAddr::map_v4
+L: 147 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+A: @arg1/p,arg2
+F: ec38 photon::net::EndPoint::EndPoint
+L: 162 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+A: @arg1/p,arg2/t16:IPAddr,arg3%RSI
+F: ec84 photon::net::EndPoint::EndPoint
+L: 160 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+A: @arg1/p
+F: ecb0 photon::net::ISocketName::getsockname
+L: 228 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+A: @arg1/p%RSI
+R: @retval/t18:EndPoint
+F: ecf8 photon::net::ISocketServer::bind_v4localhost
+L: 278 /root/codes.ali/PhotonLibOS.dev/include/photon/net/socket.h
+A: @arg1/p,arg2
+R: @retval
+F: ed5a photon::Timeout::Timeout
+L: 42 /root/codes.ali/PhotonLibOS.dev/include/photon/common/timeout.h
+A: @arg1/p,arg2
+F: ede5 photon::thread_usleep
+L: 103 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread.h
+A: @arg1
+R: @retval
+F: ee19 photon::thread_sleep
+L: 114 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread.h
+A: @arg1
+R: @retval
+F: ee70 photon::__Example_of_Thread11__::asdf::$_0::operator()
+L: 158 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p,arg2,fparg1/64
+R: @retval
+F: ee91 std::operator|
+L: 130 /usr/include/c++/8/bits/ios_base.h
+A: @arg1/e:_Ios_Openmode,arg2/e:_Ios_Openmode
+R: @retval/e:_Ios_Openmode
+F: eeae testing::internal::TestFactoryBase::~TestFactoryBase
+L: 466 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: eed2 testing::internal::TestFactoryBase::~TestFactoryBase
+L: 466 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: ef04 testing::internal::TestFactoryBase::TestFactoryBase
+L: 473 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: ef28 testing::internal::CodeLocation::CodeLocation
+L: 505 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p,arg2/p,arg3
+F: ef62 testing::internal::CodeLocation::~CodeLocation
+L: 504 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: ef84 testing::AssertionResult::operator(cast)
+L: 288 /usr/include/gtest/gtest.h
+A: @arg1/p
+R: @retval
+F: efa0 testing::AssertionResult::message
+L: 297 /usr/include/gtest/gtest.h
+A: @arg1/p
+R: @retval/s
+F: efea testing::AssertionResult::failure_message
+L: 302 /usr/include/gtest/gtest.h
+A: @arg1/p
+R: @retval/s
+F: f00a testing::Message::~Message
+L: 85 /usr/include/gtest/gtest-message.h
+A: @arg1/p
+F: f02c testing::AssertionResult::AppendMessage
+L: 320 /usr/include/gtest/gtest.h
+A: @arg1/p,arg2/p
+F: f0f5 testing::Test::SetUpTestCase
+L: 389 /usr/include/gtest/gtest.h
+F: f102 testing::Test::TearDownTestCase
+L: 397 /usr/include/gtest/gtest.h
+F: f110 testing::Test::Setup
+L: 474 /usr/include/gtest/gtest.h
+A: @arg1/p
+R: @retval/p
+F: f129 RUN_ALL_TESTS
+L: 2232 /usr/include/gtest/gtest.h
+R: @retval
+F: f142 testing::AssertionResult::~AssertionResult
+L: 256 /usr/include/gtest/gtest.h
+A: @arg1/p
+F: f167 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: f173 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f191 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f19d ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: f1a9 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f1c7 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f1d3 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: f1df ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f1fd ConstString::TString::rstrip
+L: 109 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f224 ConstString::TString::strip
+L: 113 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f246 Socket_pooled_Test::Socket_pooled_Test
+L: 29 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: f276 testing::internal::TestFactoryImpl::TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: f2a5 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f2b1 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: f2bd ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f2db ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f2e7 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: f2f3 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f311 ConstString::TString::rstrip
+L: 109 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f338 ConstString::TString::strip
+L: 113 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f35a ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f366 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: f372 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f390 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f39c ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: f3a8 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f3c6 ConstString::TString::rstrip
+L: 109 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f3ed ConstString::TString::strip
+L: 113 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: f410 Socket_pooled_multisock_Test::Socket_pooled_multisock_Test
+L: 56 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: f440 testing::internal::TestFactoryImpl::TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: f470 Socket_pooled_multisock_serverclose_Test::Socket_pooled_multisock_serverclose_Test
+L: 87 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: f4a0 testing::internal::TestFactoryImpl::TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: f4d0 Socket_pooled_expiration_Test::Socket_pooled_expiration_Test
+L: 144 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: f500 testing::internal::TestFactoryImpl::TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: f52f HEX
+L: 131 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI
+R: @retval/t16:ALogInteger
+F: f573 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f58b std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f5a3 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f5bb std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f5d3 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f5eb std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+F: f603 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f61c testing::internal::scoped_ptr::~scoped_ptr
+L: 1120 /usr/include/gtest/internal/gtest-port.h
+A: @arg1/p
+F: f642 testing::internal::scoped_ptr::operator*
+L: 1122 /usr/include/gtest/internal/gtest-port.h
+A: @arg1/p
+R: @retval/p
+F: f65e testing::Message::operator<<
+L: 149 /usr/include/gtest/gtest-message.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: f6ca testing::internal::scoped_ptr::get
+L: 1124 /usr/include/gtest/internal/gtest-port.h
+A: @arg1/p
+R: @retval/p
+F: f6e6 testing::internal::scoped_ptr::operator->
+L: 1123 /usr/include/gtest/internal/gtest-port.h
+A: @arg1/p
+R: @retval/p
+F: f702 testing::internal::scoped_ptr::reset
+L: 1132 /usr/include/gtest/internal/gtest-port.h
+A: @arg1/p,arg2/p
+F: f768 testing::internal::CmpHelperNE
+L: 1522 /usr/include/gtest/gtest.h
+A: @arg1/s%RSI,arg2/s%RDX,arg3/p%RCX,arg4/p%R8
+R: @retval/t16:AssertionResult
+F: f7d0 testing::internal::scoped_ptr::~scoped_ptr
+L: 1120 /usr/include/gtest/internal/gtest-port.h
+A: @arg1/p
+F: f7f6 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: f827 make_named_value
+L: 596 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RSI,arg2/p%RDX
+R: @retval/t24:NamedValue
+F: f872 STFMTLogBuffer::STFMTLogBuffer
+L: 424 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: f89e ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: f8aa std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f8c2 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: f9b6 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: f9e7 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: f9ff make_named_value
+L: 596 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RSI,arg2/p%RDX
+R: @retval/t24:NamedValue
+F: fa49 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: fa61 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: fb63 ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: fb6f std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: fb87 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: fc7a std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/s
+R: @retval/s
+F: fc92 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: fd94 ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: fda0 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: fe93 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/s
+R: @retval/s
+F: feab __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: ffad testing::internal::EqHelper::Compare
+L: 1417 /usr/include/gtest/gtest.h
+A: @arg1/s%RSI,arg2/s%RDX,arg3/p%RCX,arg4/p%R8
+R: @retval/t16:AssertionResult
+F: fff4 std::vector::vector
+L: 391 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+F: 10016 std::vector::~vector
+L: 565 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+F: 10060 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 10078 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 10090 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 100a8 photon::thread_create11
+L: 71 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p
+R: @retval/p
+F: 1010e std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 10126 std::vector::emplace_back
+L: 97 /usr/include/c++/8/bits/vector.tcc
+A: @arg1/p
+F: 101c6 std::vector::begin
+L: 698 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p%RDI
+R: @retval/t8:__normal_iterator
+F: 101f2 std::vector::end
+L: 716 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p%RDI
+R: @retval/t8:__normal_iterator
+F: 10221 __gnu_cxx::operator!=
+L: 884 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p,arg2/p
+R: @retval
+F: 10264 __gnu_cxx::__normal_iterator::operator++
+L: 804 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p
+R: @retval/p
+F: 1028e __gnu_cxx::__normal_iterator::operator*
+L: 796 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p
+R: @retval/p
+F: 102a9 testing::internal::CmpHelperLT
+L: 1526 /usr/include/gtest/gtest.h
+A: @arg1/s%RSI,arg2/s%RDX,arg3/p%RCX,arg4/p%R8
+R: @retval/t16:AssertionResult
+F: 10316 ALogInteger::ALogInteger
+L: 96 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2,arg3/c
+F: 1038b std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 103a3 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 103bb std::_Tuple_impl::_M_head
+L: 351 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 103db std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 103f4 testing::internal::scoped_ptr::reset
+L: 1132 /usr/include/gtest/internal/gtest-port.h
+A: @arg1/p,arg2/p
+F: 1045c testing::internal::CmpHelperOpFailure
+L: 1486 /usr/include/gtest/gtest.h
+A: @arg1/s%RSI,arg2/s%RDX,arg3/p%RCX,arg4/p%R8,arg5/s%R9
+R: @retval/t16:AssertionResult
+F: 105fc LogBuffer::operator<<
+L: 370 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: 10628 STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 106c2 STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 10748 STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 107e2 STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 10874 STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 1090e STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 109a0 testing::internal::CmpHelperEQ
+L: 1387 /usr/include/gtest/gtest.h
+A: @arg1/s%RSI,arg2/s%RDX,arg3/p%RCX,arg4/p%R8
+R: @retval/t16:AssertionResult
+F: 10a06 std::_Vector_base::_Vector_impl::~_Vector_impl
+L: 88 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+F: 10a28 std::_Vector_base::_Vector_base
+L: 248 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+F: 10a4a std::_Vector_base::~_Vector_base
+L: 283 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+F: 10a9e std::_Vector_base::_M_get_Tp_allocator
+L: 237 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+R: @retval/p
+F: 10ab6 std::_Destroy
+L: 203 /usr/include/c++/8/bits/stl_construct.h
+A: @arg1/p,arg2/p,arg3/p
+F: 10ae6 photon::thread_create11
+L: 63 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1,arg2/p
+R: @retval/p
+F: 10b4f std::allocator_traits::construct
+L: 474 /usr/include/c++/8/bits/alloc_traits.h
+A: @arg1/p,arg2/p
+F: 10b8e std::vector::_M_realloc_insert
+L: 413 /usr/include/c++/8/bits/vector.tcc
+A: @arg1/p,arg2/t8:__normal_iterator%RSI
+F: 10dd6 __gnu_cxx::__normal_iterator::__normal_iterator
+L: 783 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p,arg2/p
+F: 10dfe __gnu_cxx::__normal_iterator::base
+L: 848 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p
+R: @retval/p
+F: 10e16 testing::internal::CmpHelperOpFailure
+L: 1486 /usr/include/gtest/gtest.h
+A: @arg1/s%RSI,arg2/s%RDX,arg3/p%RCX,arg4/p%R8,arg5/s%R9
+R: @retval/t16:AssertionResult
+F: 10fb5 std::_Tuple_impl::_M_head
+L: 351 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 10fd5 std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 10fed std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11011 std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11029 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 11041 std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11061 std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11081 std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 110a5 std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 110bd std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 110dd std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 110fd tuple_assistance::apply_impl
+L: 77 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p,arg3/t1:integer_sequence%stack+1
+R: @retval
+F: 1115e tuple_assistance::apply
+L: 86 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p
+R: @retval
+F: 111a3 photon::thread_reserved_space
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread.h
+A: @arg1/p,arg2
+R: @retval/p
+F: 111cc std::_Tuple_impl::_M_head
+L: 351 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 111ec std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11204 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1121c testing::AssertionResult::operator<<
+L: 305 /usr/include/gtest/gtest.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 11298 testing::AssertionResult::operator<<
+L: 305 /usr/include/gtest/gtest.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 11314 testing::AssertionResult::operator<<
+L: 305 /usr/include/gtest/gtest.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 1138f testing::internal::FormatForComparisonFailureMessage
+L: 349 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/S
+F: 113c2 testing::AssertionResult::operator<<
+L: 305 /usr/include/gtest/gtest.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 1143e testing::AssertionResult::operator<<
+L: 305 /usr/include/gtest/gtest.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 114b9 testing::internal::FormatForComparisonFailureMessage
+L: 349 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/S
+F: 114ec LogBuffer::printf_tuple
+L: 375 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: 11510 alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 11528 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+F: 11540 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 11558 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 1161a STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: 1165c alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 11674 alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: 1168c std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 116a4 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+F: 116bc LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 11730 alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 11748 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 11760 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 11822 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: 11853 alog_forwarding
+L: 204 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RDI
+R: @retval/t16:ALogStringL
+F: 11882 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+F: 1189a LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 11978 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: 119a9 alog_forwarding
+L: 204 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RDI
+R: @retval/t16:ALogStringL
+F: 119d8 testing::internal::CmpHelperEQFailure
+L: 1375 /usr/include/gtest/gtest.h
+A: @arg1/s%RSI,arg2/s%RDX,arg3/p%RCX,arg4/p%R8
+R: @retval/t16:AssertionResult
+F: 11a9e std::_Vector_base::_Vector_impl::_Vector_impl
+L: 95 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+F: 11ae2 std::allocator::~allocator
+L: 139 /usr/include/c++/8/bits/allocator.h
+A: @arg1/p
+F: 11b04 std::_Vector_base::_M_deallocate
+L: 300 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p,arg2/p,arg3
+F: 11b3f std::_Destroy
+L: 127 /usr/include/c++/8/bits/stl_construct.h
+A: @arg1/p,arg2/p
+F: 11b6b std::_Tuple_impl::_M_head
+L: 351 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11b8b std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11ba3 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 11bbc std::_Tuple_impl::_Tuple_impl
+L: 371 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 11bfe photon::__thread_create11
+L: 40 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1,arg2/p
+R: @retval/p
+F: 11cc8 __gnu_cxx::new_allocator::construct
+L: 135 /usr/include/c++/8/ext/new_allocator.h
+A: @arg1/p,arg2/p
+F: 11d0e std::vector::_M_check_len
+L: 1640 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p,arg2,arg3/s
+R: @retval
+F: 11ddd __gnu_cxx::operator-
+L: 966 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p,arg2/p
+R: @retval
+F: 11e24 std::_Vector_base::_M_allocate
+L: 293 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p,arg2
+R: @retval/p
+F: 11e5d std::__uninitialized_move_if_noexcept_a
+L: 305 /usr/include/c++/8/bits/stl_uninitialized.h
+A: @arg1/p,arg2/p,arg3/p,arg4/p
+R: @retval/p
+F: 11eb7 std::allocator_traits::destroy
+L: 486 /usr/include/c++/8/bits/alloc_traits.h
+A: @arg1/p,arg2/p
+F: 11ee3 testing::internal::FormatForComparisonFailureMessage
+L: 349 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/S
+F: 11f16 std::_Tuple_impl::_M_head
+L: 351 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11f36 std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11f4e std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 11f72 std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11f96 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 11fae std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11fce std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 11fee std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12012 std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 1202a std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 1204a std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 1206a std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 1208a std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 120aa tuple_assistance::apply_impl
+L: 77 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p,arg3/t1:integer_sequence%stack+1
+R: @retval/p
+F: 1212b tuple_assistance::apply
+L: 86 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 12170 photon::thread_reserved_space
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread.h
+A: @arg1/p,arg2
+R: @retval/p
+F: 12199 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 121b1 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 121c9 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 121e1 std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12201 std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12221 std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12245 std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12265 std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12285 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1229d tuple_assistance::apply_impl
+L: 77 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p,arg3/t1:integer_sequence%stack+1
+R: @retval
+F: 122fb tuple_assistance::apply
+L: 86 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p
+R: @retval
+F: 12340 photon::thread_reserved_space
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread.h
+A: @arg1/p,arg2
+R: @retval/p
+F: 1236a testing::Message::operator<<
+L: 115 /usr/include/gtest/gtest-message.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 123a6 testing::Message::operator<<
+L: 115 /usr/include/gtest/gtest-message.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 123e1 testing::internal::FormatForComparison::Format::cxx11
+L: 275 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI
+R: @retval/S
+F: 12410 testing::Message::operator<<
+L: 115 /usr/include/gtest/gtest-message.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 1244c testing::Message::operator<<
+L: 115 /usr/include/gtest/gtest-message.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 12487 testing::internal::FormatForComparison::Format::cxx11
+L: 275 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI
+R: @retval/S
+F: 124b6 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 124f8 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: 12580 operator<<
+L: 610 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 125ce LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 12626 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 12688 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 12700 std::allocator::allocator
+L: 131 /usr/include/c++/8/bits/allocator.h
+A: @arg1/p
+F: 12722 __gnu_cxx::new_allocator::~new_allocator
+L: 86 /usr/include/c++/8/ext/new_allocator.h
+A: @arg1/p
+F: 12737 std::allocator_traits::deallocate
+L: 461 /usr/include/c++/8/bits/alloc_traits.h
+A: @arg1/p,arg2/p,arg3
+F: 1276b std::_Destroy_aux::__destroy
+L: 117 /usr/include/c++/8/bits/stl_construct.h
+A: @arg1/p,arg2/p
+F: 12784 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1279c std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 127bc std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 127dc std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12800 std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12818 std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12838 std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12858 tuple_assistance::apply_impl
+L: 77 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p,arg3/t1:integer_sequence%stack+1
+F: 128db tuple_assistance::apply
+L: 86 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p
+F: 12920 photon::thread_reserved_space
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread.h
+A: @arg1/p,arg2
+R: @retval/p
+F: 1294a std::tuple::tuple
+L: 971 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p,arg3/p
+F: 1299e std::_Head_base::_Head_base
+L: 132 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 129e0 std::tuple::tuple
+L: 987 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 12a0c std::pair::pair
+L: 341 /usr/include/c++/8/bits/stl_pair.h
+A: @arg1/p,arg2/p,arg3/p
+F: 12a64 std::vector::max_size
+L: 810 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+R: @retval
+F: 12a8c std::vector::size
+L: 805 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+R: @retval
+F: 12ab9 std::max
+L: 219 /usr/include/c++/8/bits/stl_algobase.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 12aee std::allocator_traits::allocate
+L: 435 /usr/include/c++/8/bits/alloc_traits.h
+A: @arg1/p,arg2
+R: @retval/p
+F: 12b1e std::__make_move_if_noexcept_iterator
+L: 1218 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p%RDI
+R: @retval/t8:move_iterator
+F: 12b49 std::__uninitialized_copy_a
+L: 287 /usr/include/c++/8/bits/stl_uninitialized.h
+A: @arg1/t8:move_iterator%RDI,arg2/t8:move_iterator%RSI,arg3/p%RDX,arg4/p%RCX
+R: @retval/p
+F: 12b80 __gnu_cxx::new_allocator::destroy
+L: 140 /usr/include/c++/8/ext/new_allocator.h
+A: @arg1/p,arg2/p
+F: 12b99 testing::internal::FormatForComparison::Format::cxx11
+L: 275 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI
+R: @retval/S
+F: 12bc8 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 12be0 std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12c00 std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12c20 std::_Tuple_impl::_M_head
+L: 195 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12c44 std::_Head_base::_M_head
+L: 160 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12c5c std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12c7c std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12c9c std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 12cbc std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/s
+F: 12cdc std::get
+L: 1314 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12cfc std::__get_helper
+L: 1303 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 12d1c tuple_assistance::apply_impl
+L: 77 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p,arg3/t1:integer_sequence%stack+1
+R: @retval
+F: 12dbf tuple_assistance::apply
+L: 86 /root/codes.ali/PhotonLibOS.dev/include/photon/common/tuple-assistance.h
+A: @arg1/p,arg2/p
+R: @retval
+F: 12e04 photon::thread_reserved_space
+L: 76 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread.h
+A: @arg1/p,arg2
+R: @retval/p
+F: 12e2d std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 12e45 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 12e5d std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 12e75 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 12e8d std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 12ea5 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 12ebe photon::FunctorWrapper::operator()
+L: 53 /root/codes.ali/PhotonLibOS.dev/include/photon/thread/thread11.h
+A: @arg1/p,arg2/p,arg3/p
+R: @retval
+F: 12f1b testing::PrintToString
+L: 980 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI
+R: @retval/S
+F: 12fd3 testing::PrintToString
+L: 980 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI
+R: @retval/S
+F: 1308b alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: 130a3 operator<<
+L: 610 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 130f2 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 131dd alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+F: 131f6 __gnu_cxx::new_allocator::new_allocator
+L: 79 /usr/include/c++/8/ext/new_allocator.h
+A: @arg1/p
+F: 1320c __gnu_cxx::new_allocator::deallocate
+L: 116 /usr/include/c++/8/ext/new_allocator.h
+A: @arg1/p,arg2/p,arg3
+F: 13234 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1324c std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 13264 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1327c std::_Tuple_impl::_Tuple_impl
+L: 216 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 132d9 std::_Tuple_impl::_M_tail
+L: 201 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 132f1 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1330a std::_Tuple_impl::_Tuple_impl
+L: 223 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 13373 std::allocator_traits::max_size
+L: 495 /usr/include/c++/8/bits/alloc_traits.h
+A: @arg1/p
+R: @retval
+F: 13394 std::_Vector_base::_M_get_Tp_allocator
+L: 241 /usr/include/c++/8/bits/stl_vector.h
+A: @arg1/p
+R: @retval/p
+F: 133ac __gnu_cxx::new_allocator::allocate
+L: 99 /usr/include/c++/8/ext/new_allocator.h
+A: @arg1/p,arg2,arg3/p
+R: @retval/p
+F: 133f6 std::move_iterator::move_iterator
+L: 1033 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p,arg2/p
+F: 1341a std::uninitialized_copy
+L: 115 /usr/include/c++/8/bits/stl_uninitialized.h
+A: @arg1/t8:move_iterator%RDI,arg2/t8:move_iterator%RSI,arg3/p%RDX
+R: @retval/p
+F: 13451 testing::PrintToString
+L: 980 /usr/include/gtest/gtest-printers.h
+A: @arg1/p%RSI
+R: @retval/S
+F: 13509 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 13521 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 13539 testing::internal::UniversalTersePrinter::Print
+L: 783 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13565 testing::internal::UniversalTersePrinter::Print
+L: 783 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13592 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 1367e LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 13772 std::_Tuple_impl::_Tuple_impl
+L: 365 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 137ac std::_Head_base::_Head_base
+L: 132 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 137dc std::_Head_base::_Head_base
+L: 132 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 1380c __gnu_cxx::new_allocator::max_size
+L: 129 /usr/include/c++/8/ext/new_allocator.h
+A: @arg1/p
+R: @retval
+F: 1382a std::__uninitialized_copy::__uninit_copy
+L: 99 /usr/include/c++/8/bits/stl_uninitialized.h
+A: @arg1/t8:move_iterator%RDI,arg2/t8:move_iterator%RSI,arg3/p%RDX
+R: @retval/p
+F: 1385d testing::internal::UniversalTersePrinter::Print
+L: 783 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13889 testing::internal::UniversalPrint
+L: 852 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 138b5 testing::internal::UniversalPrint
+L: 852 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 138e2 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 139d6 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 13a90 std::_Head_base::_Head_base
+L: 132 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 13ad2 std::copy
+L: 446 /usr/include/c++/8/bits/stl_algobase.h
+A: @arg1/t8:move_iterator%RDI,arg2/t8:move_iterator%RSI,arg3/p%RDX
+R: @retval/p
+F: 13b24 testing::internal::UniversalPrint
+L: 852 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13b50 testing::internal::UniversalPrinter::Print
+L: 698 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13b7c testing::internal::UniversalPrinter::Print
+L: 698 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13ba8 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 13c62 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 13cde std::__miter_base
+L: 1238 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/t8:move_iterator%RDI
+R: @retval/p
+F: 13d06 std::__copy_move_a2
+L: 420 /usr/include/c++/8/bits/stl_algobase.h
+A: @arg1/p,arg2/p,arg3/p
+R: @retval/p
+F: 13d64 testing::internal::UniversalPrinter::Print
+L: 698 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13d90 testing::internal::PrintTo
+L: 454 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13dd1 testing::internal::PrintTo
+L: 454 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13e0a LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 13e86 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+R: @retval/p
+F: 13f0e std::move_iterator::base
+L: 1042 /usr/include/c++/8/bits/stl_iterator.h
+A: @arg1/p
+R: @retval/p
+F: 13f29 std::__miter_base
+L: 419 /usr/include/c++/8/bits/cpp_type_traits.h
+A: @arg1/p
+R: @retval/p
+F: 13f41 std::__niter_base
+L: 277 /usr/include/c++/8/bits/stl_algobase.h
+A: @arg1/p
+R: @retval/p
+F: 13f59 std::__copy_move_a
+L: 375 /usr/include/c++/8/bits/stl_algobase.h
+A: @arg1/p,arg2/p,arg3/p
+R: @retval/p
+F: 13f90 testing::internal::PrintTo
+L: 454 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 13fc8 testing::internal::IsContainerTest
+L: 940 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1
+R: @retval/c
+F: 13fe1 testing::internal::DefaultPrintTo
+L: 404 /usr/include/gtest/gtest-printers.h
+A: @arg1/c,arg2/t1:bool_constant%stack+1,arg3/p%RSI,arg4/p%RDX
+F: 14051 testing::internal::IsContainerTest
+L: 940 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1
+R: @retval/c
+F: 1406a testing::internal::DefaultPrintTo
+L: 436 /usr/include/gtest/gtest-printers.h
+A: @arg1/c,arg2/t1:bool_constant%stack+1,arg3/p%RSI,arg4/p%RDX
+F: 1409b alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 140b4 LogFormatter::put
+L: 278 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p,arg3,arg4
+F: 14100 std::__copy_move::__copy_m
+L: 357 /usr/include/c++/8/bits/stl_algobase.h
+A: @arg1/p,arg2/p,arg3/p
+R: @retval/p
+F: 14165 testing::internal::IsContainerTest
+L: 940 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1
+R: @retval/c
+F: 1417e testing::internal::DefaultPrintTo
+L: 436 /usr/include/gtest/gtest-printers.h
+A: @arg1/c,arg2/t1:bool_constant%stack+1,arg3/p%RSI,arg4/p%RDX
+F: 141af testing_internal::DefaultPrintNonContainerTo
+L: 222 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 141db alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 141f4 LogFormatter::put
+L: 278 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p,arg3,arg4
+F: 14241 testing_internal::DefaultPrintNonContainerTo
+L: 222 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 1426e testing::internal2::operator<<
+L: 203 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 1429d testing::internal2::TypeWithoutFormatter::PrintValue
+L: 139 /usr/include/gtest/gtest-printers.h
+A: @arg1/p,arg2/p
+F: 142cc Socket_pooled_expiration_Test::~Socket_pooled_expiration_Test
+L: 144 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 142fc Socket_pooled_expiration_Test::~Socket_pooled_expiration_Test
+L: 144 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 1432e testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 1435e testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 14390 Socket_pooled_multisock_serverclose_Test::~Socket_pooled_multisock_serverclose_Test
+L: 87 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 143c0 Socket_pooled_multisock_serverclose_Test::~Socket_pooled_multisock_serverclose_Test
+L: 87 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 143f2 testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 14422 testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 14454 Socket_pooled_multisock_Test::~Socket_pooled_multisock_Test
+L: 56 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 14484 Socket_pooled_multisock_Test::~Socket_pooled_multisock_Test
+L: 56 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 144b6 testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 144e6 testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 14518 Socket_pooled_Test::~Socket_pooled_Test
+L: 29 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 14548 Socket_pooled_Test::~Socket_pooled_Test
+L: 29 /root/codes.ali/PhotonLibOS.dev/net/test/test_sockpool.cpp
+A: @arg1/p
+F: 1457a testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 145aa testing::internal::TestFactoryImpl::~TestFactoryImpl
+L: 482 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+F: 145dc testing::internal::TestFactoryImpl::CreateTest
+L: 484 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+R: @retval/p
+F: 14630 testing::internal::TestFactoryImpl::CreateTest
+L: 484 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+R: @retval/p
+F: 14684 testing::internal::TestFactoryImpl::CreateTest
+L: 484 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+R: @retval/p
+F: 146d8 testing::internal::TestFactoryImpl::CreateTest
+L: 484 /usr/include/gtest/internal/gtest-internal.h
+A: @arg1/p
+R: @retval/p
+F: 14a8d ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14a9a photon::init::$_0::operator()
+L: 70 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14abb ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14ac8 photon::init::$_1::operator()::$_0::operator()
+L: 70 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14aea photon::init::$_1::operator()
+L: 70 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: 14b7c std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 14b94 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14ba0 photon::init::$_2::operator()
+L: 76 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14bc1 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14bce photon::init::$_3::operator()::$_0::operator()
+L: 76 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14bf0 photon::init::$_3::operator()
+L: 76 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: 14d42 std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 14d5a ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14d66 photon::init::$_4::operator()
+L: 77 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14d87 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14d94 photon::init::$_5::operator()::$_0::operator()
+L: 77 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14db6 photon::init::$_5::operator()
+L: 77 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: 14e5f std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 14e77 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14e84 photon::init::$_6::operator()
+L: 81 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14ea5 ConstString::build_tstring
+L: 135 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t0:index_sequence%stack+1
+R: @retval/t1:TString
+F: 14eb2 photon::init::$_7::operator()::$_0::operator()
+L: 81 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RDI
+R: @retval/t1:TString
+F: 14ed4 photon::init::$_7::operator()
+L: 81 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1/p%RSI,arg2/p%RDX
+R: @retval/t4120:STFMTLogBuffer
+F: 1501b std::move
+L: 99 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 15033 photon::init
+L: 69 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1,arg2,arg3/p
+R: @retval
+F: 1547b photon::is_using_default_engine
+L: 86 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+R: @retval
+F: 154b8 photon::set_cpu_affinity
+L: 95 /root/codes.ali/PhotonLibOS.dev/test/ci-tools.cpp
+A: @arg1
+F: 1556d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 155cf std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1563f std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 156a1 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 15711 std::char_traits::length
+L: 323 /usr/include/c++/8/bits/char_traits.h
+A: @arg1/s
+R: @retval
+F: 15748 std::experimental::fundamentals_v1::basic_string_view::data
+L: 212 /usr/include/c++/8/experimental/string_view
+A: @arg1/p
+R: @retval/s
+F: 15764 std::experimental::fundamentals_v1::basic_string_view::basic_string_view
+L: 113 /usr/include/c++/8/experimental/string_view
+A: @arg1/p,arg2/s,arg3
+F: 15798 std::experimental::fundamentals_v1::basic_string_view::basic_string_view
+L: 108 /usr/include/c++/8/experimental/string_view
+A: @arg1/p,arg2/s
+F: 157e2 std::experimental::fundamentals_v1::basic_string_view::basic_string_view
+L: 108 /usr/include/c++/8/experimental/string_view
+A: @arg1/p,arg2/s
+F: 1582c estring_view::estring_view
+L: 63 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/s,arg3
+F: 15860 estring_view::estring_view
+L: 64 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p
+F: 1588c std::experimental::fundamentals_v1::basic_string_view::size
+L: 158 /usr/include/c++/8/experimental/string_view
+A: @arg1/p
+R: @retval
+F: 158a8 estring::append
+L: 527 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 158f7 estring::cat_item_filter
+L: 599 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/t16:basic_string_view
+R: @retval/t16:basic_string_view
+F: 15920 estring::UpperBoundEstimator::operator()
+L: 650 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+F: 1595a estring::Appender::Appender
+L: 656 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+F: 1597e estring::Appender::operator()
+L: 658 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+F: 159ae estring::~estring
+L: 457 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p
+F: 159cf operator<<
+L: 22 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog-stdstring.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 15a95 operator<<
+L: 39 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog-stdstring.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 15ac0 estring_view::estring_view
+L: 63 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/s
+F: 15aec estring::estring
+L: 462 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p
+F: 15b0e estring::estring
+L: 460 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/s,arg3/p
+F: 15b42 estring::operator=
+L: 457 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 15b71 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15b7d ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15b9b ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15ba7 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15bb3 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15bd1 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15bdd ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15be9 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15c07 ConstString::TString::rstrip
+L: 109 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15c2e ConstString::TString::strip
+L: 113 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15c50 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15c5c ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15c68 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15c86 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15c92 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15c9e ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15cbc ConstString::TString::rstrip
+L: 109 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15ce3 ConstString::TString::strip
+L: 113 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15d05 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15d11 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15d1d ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15d3b ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15d47 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15d53 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15d71 ConstString::TString::rstrip
+L: 109 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15d98 ConstString::TString::strip
+L: 113 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15dba ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15dc6 ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15dd2 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15df0 ConstString::TString::lstrip
+L: 105 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15dfc ConstString::TString::tsreverse
+L: 95 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+A: @arg1/t1:TString%stack+1
+R: @retval/t1:TString
+F: 15e08 ConstString::TString::reverse
+L: 99 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15e26 ConstString::TString::rstrip
+L: 109 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15e4d ConstString::TString::strip
+L: 113 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TString
+F: 15e6f std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 15e87 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 15ea0 estring::append
+L: 523 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p
+R: @retval/p
+F: 15ef6 estring::appends
+L: 533 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p
+R: @retval/p
+F: 15fa1 ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: 15fad __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 1608d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/s
+R: @retval/s
+F: 160a5 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 16198 ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: 161a4 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 161bc std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 161d4 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 162d6 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/s
+R: @retval/s
+F: 162ee __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 16406 ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: 16412 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1642a __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 1651d std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/s
+R: @retval/s
+F: 16535 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 16637 ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: 16643 __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 16736 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/s
+R: @retval/s
+F: 1674e __log__
+L: 471 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1%RSI,arg2/p%RDX,arg3/p%RCX,arg4/p%R8,arg5/t1:TString
+R: @retval/t4120:STFMTLogBuffer
+F: 16850 estring::make_cat_list
+L: 604 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+R: @retval/t32:CatList
+F: 168d4 STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 1695a STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 169ca ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: 169d6 STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 16a88 STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 16b3c ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: 16b48 STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 16be6 STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 16c7a STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 16d16 STFMTLogBuffer::print_fmt
+L: 461 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 16da8 estring::CatList::CatList
+L: 543 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p,arg3/p
+F: 16ddc std::get
+L: 1320 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 16dfc std::__get_helper
+L: 1308 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 16e1c std::_Tuple_impl::_M_head
+L: 198 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 16e40 std::_Head_base::_M_head
+L: 163 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 16e58 estring::enumerate
+L: 631 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+F: 16ea2 estring::enumerate
+L: 631 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+F: 16eec LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 16fae STFMTLogBuffer::print_fmt
+L: 455 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1
+F: 16ff8 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: 17029 alog_forwarding
+L: 204 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RDI
+R: @retval/t16:ALogStringL
+F: 17058 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17119 alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 17131 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 1714a LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 1720b ConstString::TString::cut
+L: 101 /root/codes.ali/PhotonLibOS.dev/include/photon/common/conststr.h
+R: @retval/t1:TSCut
+F: 17218 STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/p%RSI
+F: 172b4 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: 172e5 alog_forwarding
+L: 204 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RDI
+R: @retval/t16:ALogStringL
+F: 17314 alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 1732c std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 17344 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17438 ALogStringPChar::ALogStringPChar
+L: 194 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s,arg3
+F: 1746c alog_forwarding
+L: 213 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p%RDI
+R: @retval/t16:ALogStringPChar
+F: 174c3 std::forward
+L: 74 /usr/include/c++/8/bits/move.h
+A: @arg1/p
+R: @retval/p
+F: 174dc LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 1759e STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 17624 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: 17655 alog_forwarding
+L: 204 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RDI
+R: @retval/t16:ALogStringL
+F: 17684 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17762 ALogStringL::ALogStringL
+L: 189 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/s
+F: 17793 alog_forwarding
+L: 204 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/s%RDI
+R: @retval/t16:ALogStringL
+F: 177c2 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 178a0 std::tuple::tuple
+L: 947 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p,arg3/p
+F: 178d4 std::get
+L: 1320 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 178f4 std::__get_helper
+L: 1308 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 17914 std::_Tuple_impl::_M_head
+L: 354 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 17934 std::_Head_base::_M_head
+L: 163 /usr/include/c++/8/tuple
+A: @arg1/p
+R: @retval/p
+F: 1794c estring::enumerate
+L: 631 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+F: 1799b estring::enumerate
+L: 631 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p
+F: 179ea LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17a96 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17ad8 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17b9a STFMTLogBuffer::print_fmt
+L: 429 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/t1:TString%stack+1,arg3/s%RSI
+F: 17c20 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17c94 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17d40 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17e02 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17e5a std::_Tuple_impl::_Tuple_impl
+L: 210 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p,arg3/p
+F: 17ea1 estring::enumerate
+L: 627 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p,arg3
+F: 17ebd estring::enumerate
+L: 627 /root/codes.ali/PhotonLibOS.dev/include/photon/common/estring.h
+A: @arg1/p,arg2/p,arg3
+F: 17eda LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17f40 LogBuffer::printf
+L: 384 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p
+R: @retval/p
+F: 17fbc std::_Tuple_impl::_Tuple_impl
+L: 360 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 17fe8 std::_Head_base::_Head_base
+L: 125 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 18017 alog_forwarding
+L: 200 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p
+R: @retval/p
+F: 18030 std::_Head_base::_Head_base
+L: 125 /usr/include/c++/8/tuple
+A: @arg1/p,arg2/p
+F: 18060 LogFormatter::put
+L: 278 /root/codes.ali/PhotonLibOS.dev/include/photon/common/alog.h
+A: @arg1/p,arg2/p,arg3,arg4

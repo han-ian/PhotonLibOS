@@ -1,0 +1,652 @@
+# path name: /usr/lib64/ld-2.28.so
+# build-id: 97474752b5c79e1c84979c4aa71d40bc2c1ca793
+E: enum _unnamed_14 {glibc_rtld_nns,glibc_elision_skip_lock_after_retries,glibc_malloc_trim_threshold,glibc_malloc_perturb,glibc_cpu_x86_shared_cache_size,glibc_elision_tries,glibc_elision_enable,glibc_cpu_x86_rep_movsb_threshold,glibc_malloc_mxfast,glibc_elision_skip_lock_busy,glibc_malloc_top_pad,glibc_cpu_x86_rep_stosb_threshold,glibc_cpu_x86_non_temporal_threshold,glibc_cpu_x86_shstk,glibc_cpu_hwcap_mask,glibc_malloc_mmap_max,glibc_elision_skip_trylock_internal_abort,glibc_malloc_tcache_unsorted_limit,glibc_cpu_x86_ibt,glibc_cpu_hwcaps,glibc_elision_skip_lock_internal_abort,glibc_malloc_arena_max,glibc_malloc_mmap_threshold,glibc_cpu_x86_data_cache_size,glibc_malloc_tcache_count,glibc_malloc_arena_test,glibc_rtld_optional_static_tls,glibc_malloc_tcache_max,glibc_malloc_check,glibc_rtld_dynamic_sort,glibc_gmon_minarcs,glibc_gmon_maxarcs}
+F: 6260 _dl_call_libc_early_init
+L: 26 dl-call-libc-early-init.c
+A: @arg1/p%rdi,arg2%rsi
+F: 62f0 call_destructors
+L: 115 dl-close.c
+A: @arg1/p%rdi
+F: 6370 remove_slotinfo
+L: 49 dl-close.c
+A: @arg1%rdi,arg2/p%rsi,arg3%rdx,arg4%rcx
+R: @retval
+F: 64a0 _dl_close_worker
+L: 139 dl-close.c
+A: @arg1/p%rdi,arg2%rsi
+F: 7320 _dl_close
+L: 793 dl-close.c
+A: @arg1/p%rdi
+F: 73a0 _dl_debug_initialize
+L: 45 dl-debug.c
+A: @arg1%rdi,arg2%rsi
+R: @retval/p
+F: 7440 _dl_build_local_scope
+L: 72 dl-deps.c
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 74d0 openaux
+L: 60 dl-deps.c
+A: @arg1/p%rdi
+F: 7510 _dl_map_object_deps
+L: 156 dl-deps.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3%rdx,arg4%rcx,arg5%r8
+F: 8680 length_mismatch
+L: 56 dl-exception.c
+F: 86a0 _dl_error_free
+L: 38 dl-exception.c
+A: @arg1/p%rdi
+F: 8cd0 _dl_fini
+L: 29 dl-fini.c
+F: 91a0 _dl_init
+L: 78 dl-init.c
+A: @arg1/p%rdi,arg2%rsi,arg3/p%rdx,arg4/p%rcx
+F: 92f0 is_dst
+L: 199 dl-load.c
+A: @arg1/s%rdi,arg2/s%rsi
+R: @retval
+F: 93a0 is_trusted_path_normalize
+L: 126 dl-load.c
+A: @arg1/s%rdi,arg2%rsi
+R: @retval
+F: 9550 _dl_process_pt_note
+L: 151 ../sysdeps/x86/dl-prop.h
+A: @arg1/p%rdi,arg2/p%rsi,arg3%rdx,arg4/p%rcx
+R: @retval
+F: a050 open_path
+L: 1775 dl-load.c
+A: @arg1/s%rdi,arg2%rsi,arg3%rdx,arg4/p%rcx,arg5/p%r8,arg6/p%r9,arg7/p%stack+1,arg8%stack+2,arg9/p%stack+3
+R: @retval
+F: a700 _dl_map_object_from_fd
+L: 873 dl-load.c
+A: @arg1/s%rdi,arg2/s%rsi,arg3%rdx,arg4/p%rcx,arg5/s%r8,arg6/p%r9,arg7%stack+1,arg8%stack+2,arg9/p%stack+3,arg10%stack+4
+R: @retval/p
+F: bac0 _dl_dst_count
+L: 235 dl-load.c
+A: @arg1/s%rdi
+R: @retval
+F: bb60 _dl_dst_substitute
+L: 273 dl-load.c
+A: @arg1/p%rdi,arg2/s%rsi,arg3/s%rdx
+R: @retval/s
+F: bce0 expand_dynamic_string_token
+L: 382 dl-load.c
+A: @arg1/p%rdi,arg2/s%rsi
+R: @retval/s
+F: be00 fillin_rpath
+L: 450 dl-load.c
+A: @arg1/s%rdi,arg2/p%rsi,arg3/s%rdx,arg4/s%rcx,arg5/s%r8,arg6/p%r9
+R: @retval/p
+F: c310 _dl_init_paths
+L: 685 dl-load.c
+A: @arg1/s%rdi,arg2/s%rsi,arg3/s%rdx,arg4/s%rcx
+F: c710 _dl_map_object
+L: 1929 dl-load.c
+A: @arg1/p%rdi,arg2/s%rsi,arg3%rdx,arg4%rcx,arg5%r8,arg6%r9
+R: @retval/p
+F: d150 _dl_rtld_di_serinfo
+L: 2278 dl-load.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3%rdx
+F: d360 check_match
+L: 58 dl-lookup.c
+A: @arg1/s%rdi,arg2/p%rsi,arg3/p%rdx,arg4%rcx,arg5%r8,arg6/p%r9,arg7%stack+1,arg8/s%stack+2,arg9/p%stack+3,arg10/p%stack+4,arg11/p%stack+5
+R: @retval/p
+F: d500 do_lookup_x
+L: 357 dl-lookup.c
+A: @arg1/s%rdi,arg2%rsi,arg3/p%rdx,arg4/p%rcx,arg5/p%r8,arg6/p%r9,arg7%stack+1,arg8/p%stack+2,arg9%stack+3,arg10/p%stack+4,arg11%stack+5,arg12/p%stack+6
+R: @retval
+F: e000 _dl_lookup_symbol_x
+L: 847 dl-lookup.c
+A: @arg1/s%rdi,arg2/p%rsi,arg3/p%rdx,arg4/p%rcx,arg5/p%r8,arg6%r9,arg7%stack+1,arg8/p%stack+2
+R: @retval/p
+F: ef10 _dl_setup_hash
+L: 971 dl-lookup.c
+A: @arg1/p%rdi
+F: efd0 check_match
+L: 28 dl-lookup-direct.c
+A: @arg1/p%rdi,arg2/s%rsi,arg3/s%rdx,arg4%rcx,arg5%r8
+R: @retval/p
+F: f090 _dl_lookup_direct
+L: 71 dl-lookup-direct.c
+A: @arg1/p%rdi,arg2/s%rsi,arg3%rdx,arg4/s%rcx,arg5%r8
+R: @retval/p
+F: f260 _dl_debug_vdprintf
+L: 78 dl-misc.c
+A: @arg1%rdi,arg2%rsi,arg3/s%rdx,arg4/p%rcx
+F: f9f0 _dl_sysdep_read_whole_file
+L: 43 dl-misc.c
+A: @arg1/s%rdi,arg2/p%rsi,arg3%rdx
+R: @retval/p
+F: fa90 _dl_debug_printf
+L: 272 dl-misc.c
+A: @arg1/s%rdi
+F: fb40 _dl_debug_printf_c
+L: 284 dl-misc.c
+A: @arg1/s%rdi
+F: fbf0 _dl_dprintf
+L: 296 dl-misc.c
+A: @arg1%rdi,arg2/s%rsi
+F: fc90 _dl_printf
+L: 306 dl-misc.c
+A: @arg1/s%rdi
+F: fd40 _dl_error_printf
+L: 316 dl-misc.c
+A: @arg1/s%rdi
+F: fea0 _dl_name_match_p
+L: 339 dl-misc.c
+A: @arg1/s%rdi,arg2/p%rsi
+R: @retval
+F: ff10 _dl_higher_prime_number
+L: 357 dl-misc.c
+A: @arg1%rdi
+R: @retval
+F: ff90 _dl_strtoul
+L: 424 dl-misc.c
+A: @arg1/s%rdi,arg2/p%rsi
+R: @retval
+F: 100f0 _dl_add_to_namespace_list
+L: 30 dl-object.c
+A: @arg1/p%rdi,arg2%rsi
+F: 10190 _dl_new_object
+L: 57 dl-object.c
+A: @arg1/s%rdi,arg2/s%rsi,arg3%rdx,arg4/p%rcx,arg5%r8,arg6%r9
+R: @retval/p
+F: 105a0 add_to_global_update
+L: 171 dl-open.c
+A: @arg1/p%rdi
+F: 106f0 call_dl_init
+L: 499 dl-open.c
+A: @arg1/p%rdi
+F: 10730 add_to_global_resize
+L: 90 dl-open.c
+A: @arg1/p%rdi
+F: 10890 dl_open_worker
+L: 752 dl-open.c
+A: @arg1/p%rdi
+F: 10ad0 _dl_open
+L: 808 dl-open.c
+A: @arg1/s%rdi,arg2%rsi,arg3/p%rdx,arg4%rcx,arg5%r8,arg6/p%r9,arg7/p%stack+1
+R: @retval/p
+F: 10df0 _dl_show_scope
+L: 926 dl-open.c
+A: @arg1/p%rdi,arg2%rsi
+F: 10f30 dl_open_worker_begin
+L: 506 dl-open.c
+A: @arg1/p%rdi
+F: 11840 _dl_get_origin
+L: 35 ../sysdeps/unix/sysv/linux/dl-origin.c
+R: @retval/s
+F: 119f0 _dl_start_profile
+L: 184 dl-profile.c
+F: 12460 _dl_try_allocate_static_tls
+L: 51 dl-reloc.c
+A: @arg1/p%rdi,arg2%rsi
+R: @retval
+F: 12590 _dl_allocate_static_tls
+L: 134 dl-reloc.c
+A: @arg1/p%rdi
+F: 125d0 _dl_nothread_init_static_tls
+L: 148 dl-reloc.c
+A: @arg1/p%rdi
+F: 12620 _dl_protect_relro
+L: 348 dl-reloc.c
+A: @arg1/p%rdi
+F: 12690 _dl_reloc_bad_type
+L: 367 dl-reloc.c
+A: @arg1/p%rdi,arg2%rsi,arg3%rdx
+F: 12760 _dl_relocate_object
+L: 165 dl-reloc.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3%rdx,arg4%rcx
+F: 14760 _dl_fixup
+L: 40 dl-runtime.c
+A: @arg1/p%rdi,arg2%rsi
+R: @retval
+F: 149c0 _dl_profile_fixup
+L: 168 dl-runtime.c
+A: @arg1/p%rdi,arg2%rsi,arg3%rdx,arg4/p%rcx,arg5/p%r8
+R: @retval
+F: 14d10 _dl_scope_free
+L: 25 dl-scope.c
+A: @arg1/p%rdi
+R: @retval
+F: 14df0 dfs_traversal
+L: 145 dl-sort-maps.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx
+F: 14ee0 _dl_sort_maps_init
+L: 302 dl-sort-maps.c
+F: 14f10 _dl_sort_maps
+L: 310 dl-sort-maps.c
+A: @arg1/p%rdi,arg2%rsi,arg3%rdx,arg4%rcx
+F: 15490 allocate_dtv
+L: 386 ../elf/dl-tls.c
+A: @arg1/p%rdi
+R: @retval/p
+F: 15710 _dl_resize_dtv
+L: 513 ../elf/dl-tls.c
+A: @arg1/p%rdi,arg2%rsi
+R: @retval/p
+F: 157e0 _dl_tls_static_surplus_init
+L: 117 ../elf/dl-tls.c
+A: @arg1%rdi
+F: 15870 _dl_assign_tls_modid
+L: 151 ../elf/dl-tls.c
+A: @arg1/p%rdi
+F: 15990 _dl_count_modids
+L: 218 ../elf/dl-tls.c
+R: @retval
+F: 15a00 _dl_determine_tlsoffset
+L: 242 ../elf/dl-tls.c
+F: 15bb0 _dl_get_tls_static_info
+L: 418 ../elf/dl-tls.c
+A: @arg1/p%rdi,arg2/p%rsi
+F: 15bd0 _dl_allocate_tls_storage
+L: 442 ../elf/dl-tls.c
+R: @retval/p
+F: 16030 _dl_update_slotinfo
+L: 776 ../elf/dl-tls.c
+A: @arg1%rdi,arg2%rsi
+R: @retval/p
+F: 16230 update_get_addr
+L: 982 ../elf/dl-tls.c
+A: @arg1/p%rdi,arg2%rsi
+R: @retval/p
+F: 162e0 _dl_tls_get_addr_soft
+L: 1051 ../elf/dl-tls.c
+A: @arg1/p%rdi
+R: @retval/p
+F: 16360 _dl_tls_initial_modid_limit_setup
+L: 1097 ../elf/dl-tls.c
+F: 163c0 _dl_add_to_slotinfo
+L: 1135 ../elf/dl-tls.c
+A: @arg1/p%rdi,arg2%rsi
+R: @retval
+F: 16520 __tls_get_addr_slow
+L: 39 ../sysdeps/x86_64/dl-tls.c
+A: @arg1/p%rdi
+R: @retval/p
+F: 16570 _dl_check_map_versions
+L: 155 dl-version.c
+A: @arg1/p%rdi,arg2%rsi,arg3%rdx
+R: @retval
+F: 16cc0 _dl_check_all_versions
+L: 361 dl-version.c
+A: @arg1/p%rdi,arg2%rsi,arg3%rdx
+R: @retval
+F: 16d30 _dl_write
+L: 24 ../sysdeps/unix/sysv/linux/dl-write.c
+A: @arg1%rdi,arg2/p%rsi,arg3%rdx
+R: @retval
+F: 16d40 _dl_cache_libcmp
+L: 359 dl-cache.c
+A: @arg1/s%rdi,arg2/s%rsi
+R: @retval
+F: 16e10 search_cache
+L: 199 dl-cache.c
+A: @arg1/s%rdi,arg2%rsi,arg3/p%rdx,arg4%rcx,arg5%r8,arg6/s%r9
+R: @retval/s
+F: 17620 _dl_load_cache_lookup
+L: 405 dl-cache.c
+A: @arg1/s%rdi
+R: @retval/s
+F: 179e0 _dl_unload_cache
+L: 526 dl-cache.c
+F: 17a30 do_tunable_update_val
+L: 106 dl-tunables.c
+A: @arg1/p%rdi,arg2/p%rsi
+F: 17aa0 tunable_initialize
+L: 143 dl-tunables.c
+A: @arg1/p%rdi,arg2/s%rsi
+F: 17af0 __tunable_set_val
+L: 162 dl-tunables.c
+A: @arg1/e:_unnamed_14%rdi,arg2/p%rsi
+F: 17b20 __GI___tunables_init
+L: 288 dl-tunables.c
+A: @arg1/p%rdi
+F: 180d0 __GI___tunables_print
+L: 367 dl-tunables.c
+F: 18260 _dl_make_tlsdesc_dynamic
+L: 86 ./tlsdeschtab.h
+A: @arg1/p%rdi,arg2%rsi
+R: @retval/p
+F: 18520 _dl_unmap
+L: 29 ../sysdeps/x86_64/tlsdesc.c
+A: @arg1/p%rdi
+F: 192d0 __x86_cpu_features_ifunc
+L: 42 ../sysdeps/x86/dl-get-cpu-features.c
+R: @retval/p
+F: 19300 _dl_x86_init_cpu_features
+L: 36 ../sysdeps/x86/dl-get-cpu-features.c
+F: 19320 __x86_get_cpu_features
+L: 49 ../sysdeps/x86/dl-get-cpu-features.c
+A: @arg1%rdi
+R: @retval/p
+F: 19340 dl_cet_check
+L: 38 ../sysdeps/x86/dl-cet.c
+A: @arg1/p%rdi,arg2/s%rsi
+F: 19780 _dl_cet_open_check
+L: 231 ../sysdeps/x86/dl-cet.c
+A: @arg1/p%rdi
+F: 19790 _dl_cet_check
+L: 244 ../sysdeps/x86/dl-cet.c
+A: @arg1/p%rdi,arg2/s%rsi
+F: 197a0 _dl_audit_activity_map
+L: 29 dl-audit.c
+A: @arg1/p%rdi,arg2%rsi
+F: 19810 _dl_audit_activity_nsid
+L: 40 dl-audit.c
+A: @arg1%rdi,arg2%rsi
+F: 198a0 _dl_audit_objsearch
+L: 54 dl-audit.c
+A: @arg1/s%rdi,arg2/p%rsi,arg3%rdx
+R: @retval/s
+F: 19930 _dl_audit_objopen
+L: 76 dl-audit.c
+A: @arg1/p%rdi,arg2%rsi
+F: 199b0 _dl_audit_objclose
+L: 96 dl-audit.c
+A: @arg1/p%rdi
+F: 19a20 _dl_audit_preinit
+L: 117 dl-audit.c
+A: @arg1/p%rdi
+F: 19bd0 _dl_audit_symbind
+L: 178 dl-audit.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx,arg4/p%rcx,arg5/p%r8
+F: 19e40 _dl_audit_pltenter
+L: 266 dl-audit.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx,arg4/p%rcx,arg5/p%r8
+F: 1a030 _dl_audit_pltexit
+L: 342 dl-audit.c
+A: @arg1/p%rdi,arg2%rsi,arg3/p%rdx,arg4/p%rcx
+F: 1a130 _dl_resolve_conflicts
+L: 31 dl-conflict.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx
+F: 1a2a0 print_quoted_char
+L: 43 dl-diagnostics.c
+A: @arg1/c%rdi
+F: 1a340 print_string_length
+L: 64 dl-diagnostics.c
+A: @arg1/s%rdi,arg2%rsi
+F: 1a3b0 _dl_diagnostics_print_string
+L: 74 dl-diagnostics.c
+A: @arg1/s%rdi
+F: 1a440 _dl_diagnostics_print_labeled_string
+L: 91 dl-diagnostics.c
+A: @arg1/s%rdi,arg2/s%rsi
+F: 1a490 _dl_diagnostics_print_labeled_value
+L: 100 dl-diagnostics.c
+A: @arg1/s%rdi,arg2%rsi
+F: 1a4b0 _dl_print_diagnostics
+L: 232 dl-diagnostics.c
+A: @arg1/p%rdi
+F: 1a8a0 get_common_cache_info
+L: 60 ../sysdeps/x86/cacheinfo.h
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx,arg4%rcx
+F: 1acc0 handle_zhaoxin
+L: 521 ../sysdeps/x86/dl-cacheinfo.h
+A: @arg1%rdi
+R: @retval
+F: 1adc0 handle_amd
+L: 309 ../sysdeps/x86/dl-cacheinfo.h
+A: @arg1%rdi
+R: @retval
+F: 1b460 _dl_diagnostics_cpu
+L: 51 ../sysdeps/x86/dl-diagnostics-cpu.c
+F: 1bc20 print_uname
+L: 58 ../sysdeps/unix/sysv/linux/dl-diagnostics-kernel.c
+F: 1bd10 _dl_diagnostics_kernel
+L: 73 ../sysdeps/unix/sysv/linux/dl-diagnostics-kernel.c
+F: 1bdb0 _dl_next_ld_env_entry
+L: 27 dl-environ.c
+A: @arg1/p%rdi
+R: @retval/s
+F: 1be00 unsetenv
+L: 56 dl-environ.c
+A: @arg1/s%rdi
+R: @retval
+F: 1be80 fatal_error
+L: 74 dl-error-skeleton.c
+A: @arg1%rdi,arg2/s%rsi,arg3/s%rdx,arg4/s%rcx
+F: 1bf20 _dl_signal_exception
+L: 89 dl-error-skeleton.c
+A: @arg1%rdi,arg2/p%rsi,arg3/s%rdx
+F: 1bf70 _dl_signal_error
+L: 107 dl-error-skeleton.c
+A: @arg1%rdi,arg2/s%rsi,arg3/s%rdx,arg4/s%rcx
+F: 1bfc0 _dl_signal_cexception
+L: 131 dl-error-skeleton.c
+A: @arg1%rdi,arg2/p%rsi,arg3/s%rdx
+F: 1c040 _dl_signal_cerror
+L: 152 dl-error-skeleton.c
+A: @arg1%rdi,arg2/s%rsi,arg3/s%rdx,arg4/s%rcx
+F: 1c0d0 _dl_catch_exception
+L: 173 dl-error-skeleton.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx
+R: @retval
+F: 1c1c0 _dl_catch_error
+L: 223 dl-error-skeleton.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx,arg4/p%rcx,arg5/p%r8
+R: @retval
+F: 1c210 _dl_receive_error
+L: 237 dl-error-skeleton.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx
+F: 1c260 _rtld_catch_error
+L: 254 dl-error-skeleton.c
+A: @arg1/p%rdi,arg2/p%rsi,arg3/p%rdx,arg4/p%rcx,arg5/p%r8
+R: @retval
+F: 1c270 update_hwcaps_counts
+L: 47 dl-hwcaps.c
+A: @arg1/p%rdi,arg2/s%rsi,arg3%rdx,arg4/s%rcx
+F: 1c370 _dl_important_hwcaps
+L: 169 dl-hwcaps.c
+A: @arg1/s%rdi,arg2/s%rsi,arg3/p%rdx,arg4/p%rcx
+R: @retval/p
+F: 1cc60 _dl_hwcaps_subdirs_active
+L: 26 ../sysdeps/x86_64/dl-hwcaps-subdirs.c
+R: @retval
+F: 1cd80 _dl_hwcaps_split
+L: 25 dl-hwcaps_split.c
+A: @arg1/p%rdi
+F: 1cdb0 _dl_hwcaps_contains
+L: 65 dl-hwcaps_split.c
+A: @arg1/s%rdi,arg2/s%rsi,arg3%rdx
+R: @retval
+F: 1ce50 _dl_hwcaps_split_masked
+L: 50 dl-hwcaps_split.c
+A: @arg1/p%rdi
+R: @retval
+F: 1ceb0 rtld_calloc
+L: 170 dl-minimal.c
+A: @arg1%rdi,arg2%rsi
+R: @retval/p
+F: 1cef0 rtld_malloc
+L: 127 dl-minimal.c
+A: @arg1%rdi
+R: @retval/p
+F: 1d020 rtld_free
+L: 187 dl-minimal.c
+A: @arg1/p%rdi
+F: 1d060 __rtld_malloc_init_stubs
+L: 54 dl-minimal.c
+F: 1d0a0 __sigjmp_save
+L: 217 dl-minimal.c
+A: @arg1/p%rdi,arg2%rsi
+R: @retval
+F: 1d0b0 __strerror_r
+L: 229 dl-minimal.c
+A: @arg1%rdi,arg2/s%rsi,arg3%rdx
+F: 1d1a0 __GI___libc_fatal
+L: 266 dl-minimal.c
+A: @arg1/s%rdi
+F: 1d1c0 __GI___chk_fail
+L: 274 dl-minimal.c
+F: 1d1e0 __GI___assert_fail
+L: 286 dl-minimal.c
+A: @arg1/s%rdi,arg2/s%rsi,arg3%rdx,arg4/s%rcx
+F: 1d220 rtld_realloc
+L: 202 dl-minimal.c
+A: @arg1/p%rdi,arg2%rsi
+F: 1d2b0 __rtld_malloc_is_complete
+L: 63 dl-minimal.c
+R: @retval
+F: 1d2f0 lookup_malloc_symbol
+L: 74 dl-minimal.c
+A: @arg1/p%rdi,arg2/s%rsi,arg3/p%rdx
+F: 1d3c0 __rtld_malloc_init_real
+L: 88 dl-minimal.c
+A: @arg1/p%rdi
+F: 1d4c0 __GI___assert_perror_fail
+L: 298 dl-minimal.c
+A: @arg1%rdi,arg2/s%rsi,arg3%rdx,arg4/s%rcx
+F: 1d520 _itoa
+L: 317 dl-minimal.c
+A: @arg1%rdi,arg2/s%rsi,arg3%rdx,arg4%rcx
+R: @retval/s
+F: 1d610 _dl_tunable_set_hwcaps
+L: 90 ../sysdeps/x86/cpu-tunables.c
+A: @arg1/p%rdi
+F: 1e130 _dl_tunable_set_x86_ibt
+L: 301 ../sysdeps/x86/cpu-tunables.c
+A: @arg1/p%rdi
+F: 1e1b0 _dl_tunable_set_x86_shstk
+L: 314 ../sysdeps/x86/cpu-tunables.c
+A: @arg1/p%rdi
+F: 1e230 _dl_sysdep_start
+L: 85 ../elf/dl-sysdep.c
+A: @arg1/p%rdi,arg2/p%rsi
+R: @retval
+F: 1e5c0 _dl_sysdep_start_cleanup
+L: 261 ../elf/dl-sysdep.c
+F: 1e5d0 _dl_show_auxv
+L: 266 ../elf/dl-sysdep.c
+F: 1e770 _dl_discover_osversion
+L: 45 ../sysdeps/unix/sysv/linux/dl-sysdep.c
+R: @retval
+F: 1ea40 _dl_usage
+L: 29 dl-usage.c
+A: @arg1/s%rdi,arg2/s%rsi
+F: 1ea90 _dl_version
+L: 40 dl-usage.c
+F: 1eab0 _dl_help
+L: 228 dl-usage.c
+A: @arg1/s%rdi,arg2/p%rsi
+F: 1ef60 rtld_lock_default_lock_recursive
+L: 849 rtld.c
+A: @arg1/p%rdi
+F: 1ef70 rtld_lock_default_unlock_recursive
+L: 855 rtld.c
+A: @arg1/p%rdi
+F: 1ef80 lookup_doit
+L: 669 rtld.c
+A: @arg1/p%rdi
+F: 1f000 dlmopen_doit
+L: 658 rtld.c
+A: @arg1/p%rdi
+F: 1f050 map_doit
+L: 649 rtld.c
+A: @arg1/p%rdi
+F: 1f080 print_unresolved
+L: 2555 rtld.c
+A: @arg1%rdi,arg2/s%rsi,arg3/s%rdx
+F: 1f0c0 print_missing_version
+L: 2566 rtld.c
+A: @arg1%rdi,arg2/s%rsi,arg3/s%rdx
+F: 1f100 do_preload
+L: 816 rtld.c
+A: @arg1/s%rdi,arg2/p%rsi,arg3/s%rdx
+R: @retval
+F: 1f190 print_statistics_item
+L: 2906 rtld.c
+A: @arg1/s%rdi,arg2%rsi,arg3%rdx
+F: 1f3a0 print_statistics
+L: 2937 rtld.c
+A: @arg1/p%rdi
+F: 1f5c0 relocate_doit
+L: 641 rtld.c
+A: @arg1/p%rdi
+F: 1f5e0 dso_name_valid_for_suid
+L: 176 rtld.c
+A: @arg1/s%rdi
+R: @retval
+F: 1f630 init_tls
+L: 742 rtld.c
+A: @arg1%rdi
+R: @retval/p
+F: 1f7c0 unload_audit_module
+L: 931 rtld.c
+A: @arg1/p%rdi,arg2%rsi
+F: 1f880 version_check_doit
+L: 683 rtld.c
+A: @arg1/p%rdi
+F: 1fbf0 _dl_start
+L: 503 rtld.c
+A: @arg1/p%rdi
+R: @retval
+F: 20200 handle_preload_list
+L: 896 rtld.c
+A: @arg1/s%rdi,arg2/p%rsi,arg3/s%rdx
+R: @retval
+F: 202c0 dl_main
+L: 1189 rtld.c
+A: @arg1/p%rdi,arg2%rsi,arg3/p%rdx,arg4/p%rcx
+F: 24510 openat64
+L: 26 ../sysdeps/unix/sysv/linux/dl-openat64.c
+A: @arg1%rdi,arg2/s%rsi,arg3%rdx
+R: @retval
+F: 24570 __alloc_dir
+L: 97 ../sysdeps/posix/opendir.c
+A: @arg1%rdi,arg2%rsi,arg3%rdx,arg4/p%rcx
+R: @retval/p
+F: 24700 __fxstatat
+L: 35 ../sysdeps/unix/sysv/linux/wordsize-64/fxstatat.c
+A: @arg1%rdi,arg2%rsi,arg3/s%rdx,arg4/p%rcx,arg5%r8
+R: @retval
+F: 24750 check_one_fd
+L: 41 /usr/src/debug/glibc-2.28-251.el8_10.27.x86_64/csu/check_fds.c
+A: @arg1%rdi,arg2%rsi
+F: 247f0 __libc_check_standard_fds
+L: 87 /usr/src/debug/glibc-2.28-251.el8_10.27.x86_64/csu/check_fds.c
+F: 24a00 _dl_addr_inside_object
+L: 64 dl-addr-obj.c
+A: @arg1/p%rdi,arg2%rsi
+R: @retval
+F: 24a60 __profil_counter
+L: 23 ../sysdeps/unix/sysv/linux/x86_64/profil-counter.h
+A: @arg1%rdi,arg2/p%rsi,arg3/p%rdx
+F: 24b80 __profile_frequency
+L: 25 ../sysdeps/unix/sysv/linux/prof-freq.c
+R: @retval
+F: 24be0 __GI___fxstat
+L: 32 ../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c
+A: @arg1%rdi,arg2%rsi,arg3/p%rdx
+R: @retval
+F: 24c20 __GI___lxstat
+L: 32 ../sysdeps/unix/sysv/linux/wordsize-64/lxstat.c
+A: @arg1%rdi,arg2/s%rsi,arg3/p%rdx
+R: @retval
+F: 24cd0 __GI___close_nocancel
+L: 24 ../sysdeps/unix/sysv/linux/close_nocancel.c
+A: @arg1%rdi
+R: @retval
+F: 24d00 __fcntl64_nocancel_adjusted
+L: 51 ../sysdeps/unix/sysv/linux/fcntl_nocancel.c
+A: @arg1%rdi,arg2%rsi,arg3/p%rdx
+F: 24e20 __GI___openat64_nocancel
+L: 32 ../sysdeps/unix/sysv/linux/openat64_nocancel.c
+A: @arg1%rdi,arg2/s%rsi,arg3%rdx
+R: @retval
+F: 24ec0 __GI___write_nocancel
+L: 24 ../sysdeps/unix/sysv/linux/write_nocancel.c
+A: @arg1%rdi,arg2/p%rsi,arg3%rdx
+R: @retval
+F: 24ef0 __libc_scratch_buffer_set_array_size
+L: 28 /usr/src/debug/glibc-2.28-251.el8_10.27.x86_64/malloc/scratch_buffer_set_array_size.c
+A: @arg1/p%rdi,arg2%rsi,arg3%rdx
+R: @retval
+F: 250e0 __libc_sigaction
+L: 42 ../sysdeps/unix/sysv/linux/sigaction.c
+A: @arg1%rdi,arg2/p%rsi,arg3/p%rdx
+R: @retval
+F: 252f0 strcspn
+L: 31 ../string/strcspn.c
+A: @arg1/s%rdi,arg2/s%rsi
+R: @retval
