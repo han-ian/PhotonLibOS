@@ -31,6 +31,8 @@ limitations under the License.
 namespace photon {
 namespace net {
 
+#define VCPU photon::get_vcpu
+
 class TCPSocketPool;
 
 class PooledTCPSocketStream : public ForwardSocketStream {
@@ -144,28 +146,30 @@ protected:
     }
 
     ISocketStream* get_from_pool(const EndPoint& ep) {
-        static int i = 0;
-        if(i++ % 1 == 0){
-            return nullptr;
-        }
+        // static int i = 0;
+        // // if(i++ % 1 == 0){
+        // //     return nullptr;
+        // // }
         auto it = fdmap.find(ep);
         if (it == fdmap.end()) return nullptr;
         assert(it != fdmap.end());
         auto node = it->second.pop_front();
         rm_watch(node);
+        LOG_DEBUG("vcpu=`, `, `", VCPU(), node, stream_reusable(node->stream->get_underlay_fd()));
         DEFER(delete node);
+
         if (it->second.empty()) fdmap.erase(it);
         return node->stream.release();
     }
 
     void push_into_pool(StreamListNode* node) {
-        LOG_DEBUG("push into pool");
+        LOG_DEBUG("vcpu=`, push into pool", VCPU());
         fdmap[node->key].push_back(node);
         add_watch(node);
     }
 
     void drop_from_pool(StreamListNode* node) {
-        LOG_TEMP("drop_from_pool begin");
+        LOG_TEMP("vcpu=`, drop_from_pool begin, `", VCPU(), node);
 
         // or node have no record
         auto it = fdmap.find(node->key);
@@ -174,7 +178,7 @@ protected:
         if (list.empty()) fdmap.erase(it);
         rm_watch(node);
         delete node;
-        LOG_TEMP("drop_from_pool end");
+        LOG_TEMP("VCPU=`, drop_from_pool end");
     }
 
 public:
@@ -213,6 +217,7 @@ public:
             stream = m_underlay->connect(remote, local);
             if (!stream) return nullptr;
         } else if (!stream_reusable(stream->get_underlay_fd())) {
+            LOG_WARN("stream_reusable check fail, delete stream");
             delete stream;
             goto again;
         }

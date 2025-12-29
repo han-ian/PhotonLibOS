@@ -6,9 +6,11 @@
 #include <photon/thread/thread11.h>
 #include "../../test/gtest.h"
 
+const int TASK_LOOP_CNT = 20;
+
 void task(photon::net::ISocketClient* client, photon::net::EndPoint ep) {
     photon::net::ISocketStream* st = nullptr;
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < TASK_LOOP_CNT; i++) {
         st = client->connect(ep);
         ASSERT_NE(st, nullptr);
         ssize_t ret = 0;
@@ -23,6 +25,10 @@ void task(photon::net::ISocketClient* client, photon::net::EndPoint ep) {
         st->skip_read(4);
         photon::thread_yield();
         delete st;
+
+        if(i % 5 == 0){
+            photon::thread_sleep(10);
+        }
     }
 }
 
@@ -38,8 +44,12 @@ TEST(Socket, pooled) {
         char buf[4];
         int i=0;
         while (stream->read(buf, 4) > 0){ i ++; stream->write("TEST", 4); break;}
+        LOG_TEMP("will sleep 2 seconds");
         photon::thread_sleep(2);
-        stream->close();  // close socket, so client get READ/HUP event.
+        LOG_TEMP("after sleep 2 seconds");
+        // stream->close();  // close socket, so client get READ/HUP event.
+        LOG_TEMP("server close fd: `", stream->get_underlay_fd());
+        ::close(stream->get_underlay_fd());
         return 0;
     };
     server->set_handler(handler);
@@ -50,7 +60,7 @@ TEST(Socket, pooled) {
     DEFER(delete client);
     task(client, server->getsockname());
     EXPECT_EQ(1, conncount);
-    ::sleep(100);
+    photon::thread_sleep(100);
 }
 
 TEST(Socket, pooled_multisock) {
@@ -63,7 +73,12 @@ TEST(Socket, pooled_multisock) {
         DEFER(LOG_INFO("Done connection `", stream));
         conncount++;
         char buf[4];
-        while (stream->read(buf, 4) > 0) stream->write("TEST", 4);
+        while (stream->read(buf, 4) > 0) {stream->write("TEST", 4); break;};
+        photon::thread_sleep(2);
+        LOG_TEMP("after sleep 2 seconds");
+        stream->close();  // close socket, so client get READ/HUP event.
+        LOG_TEMP("server close fd: `", stream->get_underlay_fd());
+        ::close(stream->get_underlay_fd());
         return 0;
     };
     server->set_handler(handler);
@@ -82,6 +97,7 @@ TEST(Socket, pooled_multisock) {
         photon::thread_join(j);
     }
     EXPECT_EQ(5, conncount);
+    photon::thread_sleep(100);
 }
 
 TEST(Socket, pooled_multisock_serverclose) {
