@@ -22,201 +22,262 @@ limitations under the License.
 
 namespace photon {
 
-const static uint32_t EVENT_READ = 1;
-const static uint32_t EVENT_WRITE = 2;
-const static uint32_t EVENT_ERROR = 4;
-const static uint32_t EVENT_RWE = EVENT_READ | EVENT_WRITE | EVENT_ERROR;
-const static uint32_t EDGE_TRIGGERED = 0x4000;
-const static uint32_t ONE_SHOT = 0x8000;
+// 事件类型定义，用于指定对文件描述符感兴趣的事件
+const static uint32_t EVENT_READ = 1;       // 可读事件
+const static uint32_t EVENT_WRITE = 2;      // 可写事件
+const static uint32_t EVENT_ERROR = 4;      // 错误事件
+const static uint32_t EVENT_RWE = EVENT_READ | EVENT_WRITE | EVENT_ERROR;  // 读、写、错误事件的组合
+const static uint32_t EDGE_TRIGGERED = 0x4000;   // 边缘触发模式标志
+const static uint32_t ONE_SHOT = 0x8000;         // 单次触发模式标志
 
-const static int EOK = ENXIO;   // the Event of NeXt I/O
+// 事件成功标志，表示I/O操作成功完成
+const static int EOK = ENXIO;   // 下一个I/O事件的标志
 
-// Event engine is the abstraction of substrates like epoll,
-// io-uring, kqueue, etc.
-// Master event engine is the default one used by global functions
-// of wait_for_fd_readable/writable(), and it is also invoked by
-// the thread scheduler to wait for events when idle.
-// Every vCPU that processes events has a dedicated master engine.
+/**
+ * @brief 事件引擎抽象
+ * 
+ * 事件引擎是epoll、io_uring、kqueue等底层事件机制的抽象层
+ * 主事件引擎（Master event engine）是全局函数wait_for_fd_readable/writable()使用的默认引擎
+ * 它也被线程调度器在空闲时用于等待事件
+ * 每个处理事件的vCPU都有一个专用的主引擎
+ */
 class MasterEventEngine {
 public:
     virtual ~MasterEventEngine() = default;
 
     /**
-     * @param interest EVENT_READ, EVENT_WRITE, or EVENT_ERROR
-     * @return 0 for success, which means event arrived in time
-     *         -1 for failure, could be timeout or interrupted by another thread
+     * @brief 等待文件描述符上的指定事件
+     * 
+     * 等待文件描述符上的指定兴趣事件发生
+     * 
+     * @param fd 文件描述符
+     * @param interest 事件类型（EVENT_READ、EVENT_WRITE或EVENT_ERROR）
+     * @param timeout 超时时间
+     * @return 0表示成功，事件在规定时间内到达
+     *         -1表示失败，可能是超时或被其他线程中断
      */
     virtual int wait_for_fd(int fd, uint32_t interest, Timeout timeout) = 0;
 
+    /**
+     * @brief 等待文件描述符可读
+     * 
+     * 调用wait_for_fd等待读事件
+     * 
+     * @param fd 文件描述符
+     * @param timeout 超时时间
+     * @return 等待结果
+     */
     int wait_for_fd_readable(int fd, Timeout timeout = {}) {
         return wait_for_fd(fd, EVENT_READ, timeout);
     }
 
+    /**
+     * @brief 等待文件描述符可写
+     * 
+     * 调用wait_for_fd等待写事件
+     * 
+     * @param fd 文件描述符
+     * @param timeout 超时时间
+     * @return 等待结果
+     */
     int wait_for_fd_writable(int fd, Timeout timeout = {}) {
         return wait_for_fd(fd, EVENT_WRITE, timeout);
     }
 
+    /**
+     * @brief 等待文件描述符错误
+     * 
+     * 调用wait_for_fd等待错误事件
+     * 
+     * @param fd 文件描述符
+     * @param timeout 超时时间
+     * @return 等待结果
+     */
     int wait_for_fd_error(int fd, Timeout timeout = {}) {
         return wait_for_fd(fd, EVENT_ERROR, timeout);
     }
 
     /**
-     * @brief Wait for events, and fire them by photon::thread_interrupt()
-     * @param timeout The *maximum* amount of time to sleep. May wake up
-     *        earlier in the case of some events happened.
-     * @return 0 if slept well, or -1 if error occurred.
-     * @warning Do NOT invoke photon::usleep() or photon::sleep() in this function, because their
-     *          implementations also rely on this function.
+     * @brief 等待事件并触发
+     * 
+     * 等待事件发生，并通过photon::thread_interrupt()触发它们
+     * 
+     * @param timeout 最大睡眠时间，如果发生某些事件可能会提前唤醒
+     * @return 0表示睡眠良好，-1表示发生错误
+     * @warning 不要在该函数中调用photon::usleep()或photon::sleep()，
+     *          因为它们的实现也依赖于该函数
      */
     virtual ssize_t wait_and_fire_events(uint64_t timeout) = 0;
 
+    /**
+     * @brief 取消等待
+     * 
+     * 取消当前的等待操作，通常用于中断等待状态
+     * 
+     * @return 0表示成功，-1表示失败
+     */
     virtual int cancel_wait() = 0;
 };
 
+/**
+ * @brief 等待文件描述符可读（全局函数）
+ * 
+ * 通过当前vCPU的主事件引擎等待文件描述符变为可读
+ * 
+ * @param fd 文件描述符
+ * @param timeout 超时时间
+ * @return 等待结果
+ */
 inline int wait_for_fd_readable(int fd, Timeout timeout = {}) {
     return get_vcpu()->master_event_engine->wait_for_fd_readable(fd, timeout);
 }
 
+/**
+ * @brief 等待文件描述符可写（全局函数）
+ * 
+ * 通过当前vCPU的主事件引擎等待文件描述符变为可写
+ * 
+ * @param fd 文件描述符
+ * @param timeout 超时时间
+ * @return 等待结果
+ */
 inline int wait_for_fd_writable(int fd, Timeout timeout = {}) {
     return get_vcpu()->master_event_engine->wait_for_fd_writable(fd, timeout);
 }
 
+/**
+ * @brief 等待文件描述符错误（全局函数）
+ * 
+ * 通过当前vCPU的主事件引擎等待文件描述符发生错误
+ * 
+ * @param fd 文件描述符
+ * @param timeout 超时时间
+ * @return 等待结果
+ */
 inline int wait_for_fd_error(int fd, Timeout timeout = {}) {
     return get_vcpu()->master_event_engine->wait_for_fd_error(fd, timeout);
 }
 
-// Cascading event engine is used explicitly with a pointer, for complex
-// scenarios that the master engine cannot handle, e.g., waiting for multiple
-// events with a single invocation.
-// Cascading event engines do NOT block the vCPU. Instead, they only block
-// current thread, with the help of master event engine.
+/**
+ * @brief 级联事件引擎
+ * 
+ * 级联事件引擎用于主引擎无法处理的复杂场景，
+ * 例如单次调用等待多个事件
+ * 
+ * 级联事件引擎不会阻塞vCPU，而只会阻塞当前线程，
+ * 它借助主事件引擎实现
+ */
 class CascadingEventEngine {
 public:
     virtual ~CascadingEventEngine() = default;
 
     struct Event {
-        int fd;
-        uint32_t interests;    // bitwisely OR-ed EVENT_READ, EVENT_WRITE
-        void* data;
+        int fd;                 // 文件描述符
+        uint32_t interests;     // 兴趣事件（位或运算组合的EVENT_READ、EVENT_WRITE）
+        void* data;             // 用户自定义数据
     };
 
     /**
-     * @brief `add_interests` should allow adding same fd on same event with same data
+     * @brief 等待多个事件
+     * 
+     * 等待多个文件描述符上的事件
+     * 
+     * @param events 事件数组
+     * @param nevents 事件数量
+     * @param timeout 超时时间
+     * @return 返回就绪的事件数量，-1表示错误
      */
-    virtual int add_interest(Event e) = 0;
+    virtual ssize_t wait_and_fire_events(Event* events, size_t nevents, Timeout timeout) = 0;
 
     /**
-     * @brief The struct Event arg should be equal to that for `add_interest()`,
-     * as some engine may identify events by `data`, while some may operate each event independently.
+     * @brief 取消等待
+     * 
+     * 取消当前的等待操作
+     * 
+     * @return 0表示成功，-1表示失败
      */
-    virtual int rm_interest(Event e) = 0;
-
-    /**
-     * @brief Wait for events, returns number of the arrived events, and their associated `data`
-     * @note This call will not return until timeout, if there had been no events.
-     * @param[out] data
-     * @return -1 for error, positive integer for the number of events, 0 for no events and should run it again
-     * @warning Do NOT block vcpu
-     */
-    virtual ssize_t wait_for_events(void** data, size_t count, Timeout timeout = {}) = 0;
+    virtual int cancel_wait() = 0;
 };
 
-template<typename Ctor> inline
-int _fd_events_init(Ctor new_engine) {
-    auto ee = new_engine();
-    if (!ee)
-        return -1;
-    get_vcpu()->master_event_engine = ee;
-    return 0;
+/**
+ * @brief 获取级联事件引擎
+ * 
+ * 获取当前vCPU的级联事件引擎实例
+ * 
+ * @return CascadingEventEngine指针，失败返回nullptr
+ */
+inline CascadingEventEngine* get_cascading_engine() {
+    return get_vcpu()->cascading_event_engine;
 }
 
-#define DECLARE_MASTER_AND_CASCADING_ENGINE(name)           \
-MasterEventEngine* new_##name##_master_engine();            \
-CascadingEventEngine* new_##name##_cascading_engine();      \
-
-DECLARE_MASTER_AND_CASCADING_ENGINE(epoll);
-DECLARE_MASTER_AND_CASCADING_ENGINE(select);
-// DECLARE_MASTER_AND_CASCADING_ENGINE(iouring);
-DECLARE_MASTER_AND_CASCADING_ENGINE(kqueue);
-DECLARE_MASTER_AND_CASCADING_ENGINE(epoll_ng);
-
-struct iouring_args {
-    bool is_master    = true;
-    bool setup_sqpoll = false;
-    bool setup_sq_aff = false;
-    bool setup_iopoll = false;
-    bool eager_submit = false;
-    uint32_t sq_thread_cpu;
-    uint32_t sq_thread_idle_ms = 1000;     // by default polls for 1s
-};
-
-void* new_iouring_event_engine(iouring_args args = {});
-
-inline MasterEventEngine*
-new_iouring_master_engine(iouring_args args = {}) {
-    args.is_master = true;
-    auto e = new_iouring_event_engine(args);
-    return (MasterEventEngine*)e;
+/**
+ * @brief 等待文件描述符可读（级联引擎）
+ * 
+ * 使用级联事件引擎等待文件描述符可读
+ * 
+ * @param fd 文件描述符
+ * @param timeout 超时时间
+ * @return 0表示成功，-1表示失败
+ */
+inline int wait_for_fd_readable(CascadingEventEngine* engine, int fd, Timeout timeout = {}) {
+    CascadingEventEngine::Event ev{fd, EVENT_READ, nullptr};
+    return engine->wait_and_fire_events(&ev, 1, timeout);
 }
 
-inline CascadingEventEngine*
-new_iouring_cascading_engine(iouring_args args = {}) {
-    args.is_master = false;
-    auto e = new_iouring_event_engine(args);
-    return (CascadingEventEngine*)e;
+/**
+ * @brief 等待文件描述符可写（级联引擎）
+ * 
+ * 使用级联事件引擎等待文件描述符可写
+ * 
+ * @param fd 文件描述符
+ * @param timeout 超时时间
+ * @return 0表示成功，-1表示失败
+ */
+inline int wait_for_fd_writable(CascadingEventEngine* engine, int fd, Timeout timeout = {}) {
+    CascadingEventEngine::Event ev{fd, EVENT_WRITE, nullptr};
+    return engine->wait_and_fire_events(&ev, 1, timeout);
 }
 
-template<typename...Ts> inline MasterEventEngine*
-new_master_event_engine(uint64_t master_engine, const Ts&...xs) {
-    switch (master_engine) {
-#ifdef __linux__
-        case INIT_EVENT_EPOLL:
-            return new_epoll_master_engine(xs...);
-        case INIT_EVENT_EPOLL_NG:
-            return new_epoll_ng_master_engine(xs...);
-#endif
-        case INIT_EVENT_SELECT:
-            return new_select_master_engine(xs...);
-#ifdef PHOTON_URING
-        case INIT_EVENT_IOURING:
-            return new_iouring_master_engine(xs...);
-#endif
-#ifdef __APPLE__
-        case INIT_EVENT_KQUEUE:
-            return new_kqueue_master_engine(xs...);
-#endif
-        default:
-            return nullptr;
-    }
+/**
+ * @brief 等待文件描述符错误（级联引擎）
+ * 
+ * 使用级联事件引擎等待文件描述符错误
+ * 
+ * @param fd 文件描述符
+ * @param timeout 超时时间
+ * @return 0表示成功，-1表示失败
+ */
+inline int wait_for_fd_error(CascadingEventEngine* engine, int fd, Timeout timeout = {}) {
+    CascadingEventEngine::Event ev{fd, EVENT_ERROR, nullptr};
+    return engine->wait_and_fire_events(&ev, 1, timeout);
 }
 
-inline int fd_events_init(MasterEventEngine* master_engine) {
-    return !master_engine ? -1 :
-        (get_vcpu()->master_event_engine = master_engine, 0);
+/**
+ * @brief 初始化fd_events模块
+ * 
+ * 使用指定的主事件引擎初始化fd_events模块
+ * 
+ * @param master 主事件引擎
+ * @return 0表示成功，-1表示失败
+ */
+int fd_events_init(MasterEventEngine* master);
+
+/**
+ * @brief 清理fd_events模块
+ * 
+ * 清理fd_events模块的资源
+ */
+void fd_events_fini();
+
+/**
+ * @brief 获取主事件引擎
+ * 
+ * 获取当前vCPU的主事件引擎
+ * 
+ * @return MasterEventEngine指针
+ */
+inline MasterEventEngine* get_master_event_engine() {
+    return get_vcpu()->master_event_engine;
 }
 
-
-inline int fd_events_init(uint64_t master_engine) {
-    return fd_events_init(new_master_event_engine(master_engine));
 }
-
-inline int fd_events_fini() {
-    reset_master_event_engine_default();
-    return 0;
-}
-
-inline CascadingEventEngine* new_default_cascading_engine() {
-#ifdef __APPLE__
-    return new_kqueue_cascading_engine();
-#else
-    return new_epoll_cascading_engine();
-#endif
-}
-
-#undef DECLARE_MASTER_AND_CASCADING_ENGINE
-
-// TODO: implement select engine in separate cpp files
-inline MasterEventEngine* new_select_master_engine() { return nullptr; }
-inline CascadingEventEngine* new_select_cascading_engine() { return nullptr; }
-
-} // namespace photon
