@@ -44,19 +44,23 @@ using namespace net;
 // 全局标志，记录重置句柄是否已注册
 static bool reset_handle_registed = false;
 // 线程局部变量，记录当前使用的事件引擎和I/O引擎
+// 这些变量用于在fini()时知道需要清理哪些引擎
 static thread_local uint64_t g_event_engine = 0, g_io_engine = 0;
 
 // 宏定义：根据引擎类型初始化I/O子系统
 // 如果指定的I/O引擎被启用，则调用相应的初始化函数
+// 设计说明：通过宏减少重复代码，确保所有引擎的初始化逻辑一致
 #define INIT_IO(name, prefix, ...) if (INIT_IO_##name & io_engine)   { if (prefix##_init(__VA_ARGS__) < 0) return -1; }
 // 宏定义：根据引擎类型清理I/O子系统
 // 如果指定的I/O引擎曾被启用，则调用相应的清理函数
+// 设计说明：确保只清理已初始化的引擎，避免清理未初始化的组件
 #define FINI_IO(name, prefix)      if (INIT_IO_##name & g_io_engine) {     prefix##_fini(); }
 
 class Shift {
 public:
     uint8_t _n;
     // 将输入的标志转换为对应的位移值
+    // 使用__builtin_ctz找到第一个设置位的位置，避免重复的位运算
     constexpr Shift(uint64_t x) : _n(__builtin_ctz(x)) { }
     operator uint64_t() { return 1UL << _n; }
 };
@@ -64,6 +68,7 @@ public:
 // 尝试按推荐顺序初始化主事件引擎
 // Linux平台推荐顺序：epoll -> io_uring -> epoll-ng -> select
 // 非Linux平台推荐顺序：kqueue -> select
+// 设计说明：优先使用性能更好的引擎，但保留备选方案确保兼容性
 static const Shift recommended_order[] = {
 #if defined(__linux__)
     INIT_EVENT_EPOLL, INIT_EVENT_IOURING, INIT_EVENT_EPOLL_NG, INIT_EVENT_SELECT};
@@ -72,14 +77,15 @@ static const Shift recommended_order[] = {
 #endif
 
 // 根据标志和选项创建io_uring参数结构
+// 设计说明：将配置选项转换为io_uring所需的参数格式
 inline iouring_args mkargs(uint64_t flags, const PhotonOptions& opt) {
     return {
     .is_master          = true,                         // 标记为主事件引擎
-    .setup_sqpoll       = bool(flags & INIT_EVENT_IOURING_SQPOLL),  // 启用内核轮询
-    .setup_sq_aff       = bool(flags & INIT_EVENT_IOURING_SQ_AFF),  // 绑定提交队列到CPU
-    .setup_iopoll       = bool(flags & INIT_EVENT_IOURING_IOPOLL),  // 启用I/O轮询模式
+    .setup_sqpoll       = bool(flags & INIT_EVENT_IOURING_SQPOLL),  // 启用内核轮询，减少上下文切换
+    .setup_sq_aff       = bool(flags & INIT_EVENT_IOURING_SQ_AFF),  // 绑定提交队列到CPU，提高缓存局部性
+    .setup_iopoll       = bool(flags & INIT_EVENT_IOURING_IOPOLL),  // 启用I/O轮询模式，减少系统调用
     .sq_thread_cpu      = opt.iouring_sq_thread_cpu,    // 提交队列线程绑定的CPU
-    .sq_thread_idle_ms  = opt.iouring_sq_thread_idle_ms, // 提交队列线程空闲时间
+    .sq_thread_idle_ms  = opt.iouring_sq_thread_idle_ms, // 提交队列线程空闲时间，平衡性能和功耗
 };   }
 
 /**
@@ -92,6 +98,10 @@ inline iouring_args mkargs(uint64_t flags, const PhotonOptions& opt) {
  * @param flags 事件引擎标志
  * @param opt Photon运行时选项
  * @return 0表示成功，-1表示失败
+ * 
+ * 设计说明：
+ * - 对io_uring引擎使用专门的初始化方法，因为其参数配置与其他引擎不同
+ * - 将创建的主事件引擎用于初始化fd_events模块，建立事件处理链路
  */
 static int init_event_engine(uint64_t engine, uint64_t flags, const PhotonOptions& opt) {
 #ifdef PHOTON_URING
@@ -102,6 +112,7 @@ static int init_event_engine(uint64_t engine, uint64_t flags, const PhotonOption
     auto mee = new_master_event_engine(engine);
 #endif
     // 使用创建的主事件引擎初始化fd_events模块
+    // 依赖关系：fd_events模块依赖于主事件引擎，必须在主事件引擎创建后初始化
     return fd_events_init(mee);
 }
 
@@ -120,18 +131,27 @@ static int init_event_engine(uint64_t engine, uint64_t flags, const PhotonOption
  * @param io_engine I/O引擎标志
  * @param options Photon运行时配置选项
  * @return 0表示成功，-1表示失败
+ * 
+ * 设计说明：
+ * - 初始化顺序很重要：vCPU -> 事件引擎 -> I/O引擎，遵循依赖关系
+ * - 按推荐顺序尝试初始化事件引擎，确保最佳性能和兼容性
+ * - 保存已初始化的引擎类型，供清理时使用
+ * - 注册fork重置句柄，确保子进程中的状态正确
  */
 int __photon_init(uint64_t event_engine, uint64_t io_engine, const PhotonOptions& options) {
     // 根据选项配置栈分配器
+    // 池化栈分配器可以减少栈分配的开销，提高性能
     if (options.use_pooled_stack_allocator) {
         use_pooled_stack_allocator();
     }
     // 根据选项配置是否绕过线程池
+    // 绕过线程池可减少线程切换开销，但可能影响负载均衡
     if (options.bypass_threadpool) {
         set_bypass_threadpool(true);
     }
 
     // 初始化虚拟CPU，这是Photon运行的基础
+    // vCPU是Photon协程的执行环境，所有协程都在vCPU上运行
     if (vcpu_init() < 0)
         return -1;
 
@@ -143,6 +163,7 @@ int __photon_init(uint64_t event_engine, uint64_t io_engine, const PhotonOptions
     // 如果需要初始化任何事件引擎
     if (event_engine & ALL_ENGINES) {
         // 按推荐顺序尝试初始化事件引擎
+        // 推荐顺序基于性能和平台兼容性考虑
         for (auto x : recommended_order) {
             // 如果当前引擎被启用且初始化成功，则跳转到下一步
             if ((x & event_engine) && init_event_engine(x, event_engine, options) == 0) {
@@ -154,10 +175,12 @@ int __photon_init(uint64_t event_engine, uint64_t io_engine, const PhotonOptions
     }
 next:
     // 初始化同步信号处理机制
+    // 依赖关系：信号处理依赖于事件引擎，必须在事件引擎初始化后进行
     if ((INIT_EVENT_SIGNAL & event_engine) && sync_signal_init() < 0)
         return -1;
 
     // 根据编译选项初始化各种I/O引擎
+    // 各I/O引擎依赖于已初始化的事件引擎和vCPU
 #ifdef ENABLE_FSTACK_DPDK
     INIT_IO(FSTACK_DPDK, fstack_dpdk);
 #endif
@@ -167,13 +190,16 @@ next:
 #endif
 #ifdef __linux__
     // Linux平台初始化异步I/O和边缘触发轮询器
+    // 异步I/O和边缘触发模式提供更高效的I/O处理能力
     INIT_IO(LIBAIO, libaio_wrapper, options.libaio_queue_depth)
     INIT_IO(SOCKET_EDGE_TRIGGER, et_poller)
 #endif
     // 保存已初始化的引擎类型，供清理时使用
+    // 保证清理时只清理已初始化的引擎，避免清理未初始化的组件
     g_event_engine = event_engine;
     g_io_engine = io_engine;
     // 注册进程fork时的重置句柄，确保子进程中的状态正确
+    // 依赖关系：必须在初始化完成后注册，避免子进程初始化不完整
     if (!reset_handle_registed) {
         pthread_atfork(nullptr, nullptr, &reset_all_handle);
         LOG_DEBUG("reset_all_handle registed ", VALUE(getpid()));
@@ -198,6 +224,7 @@ int init(uint64_t event_engine, uint64_t io_engine, const PhotonOptions& options
 
 // 获取当前线程的清理钩子向量
 // 使用线程局部存储确保每个线程有独立的钩子列表
+// 设计说明：清理钩子允许模块在Photon清理时执行必要的清理操作
 static std::vector<Delegate<void>>& get_hook_vector() {
     thread_local std::vector<Delegate<void>> hooks;
     return hooks;
@@ -210,6 +237,10 @@ static std::vector<Delegate<void>>& get_hook_vector() {
  * 在调用fini()时，这些钩子将被依次执行
  * 
  * @param handler 要添加的回调函数
+ * 
+ * 设计说明：
+ * - 清理钩子机制允许各模块注册清理函数，确保资源正确释放
+ * - 执行顺序与注册顺序相同，模块需考虑依赖关系
  */
 void fini_hook(Delegate<void> handler) {
     get_hook_vector().emplace_back(handler);
@@ -226,9 +257,16 @@ void fini_hook(Delegate<void> handler) {
  * 5. 清理虚拟CPU
  * 
  * @return 0表示成功，-1表示失败
+ * 
+ * 设计说明：
+ * - 按初始化的反向顺序清理，避免依赖关系问题
+ * - 只清理已初始化的引擎，通过g_event_engine和g_io_engine判断
+ * - 清理完成后重置引擎标志，防止重复清理
+ * - 确保所有资源都得到释放，避免内存泄漏
  */
 int fini() {
     // 执行所有注册的清理钩子
+    // 依赖关系：钩子可能依赖于事件引擎和I/O引擎，但它们会在钩子执行后清理
     for (auto h : get_hook_vector()) {
         h.fire();
     }
@@ -236,6 +274,7 @@ int fini() {
     get_hook_vector().clear();
 #ifdef __linux__
     // Linux平台清理异步I/O和边缘触发轮询器
+    // 依赖关系：必须在fd_events清理之前清理，因为它们依赖于fd_events
     FINI_IO(LIBAIO, libaio_wrapper)
     FINI_IO(SOCKET_EDGE_TRIGGER, et_poller)
 #endif
@@ -248,13 +287,17 @@ int fini() {
 #endif
 
     // 如果启用了信号事件引擎，则清理信号处理
+    // 依赖关系：信号处理依赖于事件引擎，必须在事件引擎清理之前清理
     if (INIT_EVENT_SIGNAL & g_event_engine)
         sync_signal_fini();
     // 清理fd_events模块
+    // 依赖关系：fd_events是事件处理的核心，必须在底层事件引擎清理前清理
     fd_events_fini();
     // 清理虚拟CPU
+    // 依赖关系：vCPU是基础执行环境，最后清理以确保其他组件能正常清理
     vcpu_fini();
     // 重置引擎标志
+    // 防止重复清理，确保状态一致性
     g_event_engine = g_io_engine = 0;
     return 0;
 }

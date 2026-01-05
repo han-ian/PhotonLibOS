@@ -29,69 +29,186 @@ limitations under the License.
 #include <photon/common/conststr.h>
 #include <photon/common/retval.h>
 
+// 定义日志颜色代码宏
 #define DEFINE_ALOG_COLOR(code, symbol) \
 const unsigned char symbol = 0x##code;
-DEFINE_ALOG_COLOR(30, ALOG_COLOR_BLACK);
-DEFINE_ALOG_COLOR(31, ALOG_COLOR_RED);
-DEFINE_ALOG_COLOR(32, ALOG_COLOR_GREEN);
-DEFINE_ALOG_COLOR(33, ALOG_COLOR_YELLOW);
-DEFINE_ALOG_COLOR(34, ALOG_COLOR_BLUE);
-DEFINE_ALOG_COLOR(35, ALOG_COLOR_MAGENTA);
-DEFINE_ALOG_COLOR(36, ALOG_COLOR_CYAN);
-DEFINE_ALOG_COLOR(37, ALOG_COLOR_LIGHTGRAY);
-DEFINE_ALOG_COLOR(90, ALOG_COLOR_DARKGRAY);
-DEFINE_ALOG_COLOR(91, ALOG_COLOR_LIGHTRED);
-DEFINE_ALOG_COLOR(92, ALOG_COLOR_LIGHTGREEN);
-DEFINE_ALOG_COLOR(93, ALOG_COLOR_LIGHTYELLOW);
-DEFINE_ALOG_COLOR(94, ALOG_COLOR_LIGHTBLUE);
-DEFINE_ALOG_COLOR(95, ALOG_COLOR_LIGHTMAGENTA);
-DEFINE_ALOG_COLOR(96, ALOG_COLOR_LIGHTCYAN);
-DEFINE_ALOG_COLOR(97, ALOG_COLOR_LIGHTWHITE);
-DEFINE_ALOG_COLOR(00, ALOG_COLOR_NOTHING);
+DEFINE_ALOG_COLOR(30, ALOG_COLOR_BLACK);        // 黑色
+DEFINE_ALOG_COLOR(31, ALOG_COLOR_RED);          // 红色
+DEFINE_ALOG_COLOR(32, ALOG_COLOR_GREEN);        // 绿色
+DEFINE_ALOG_COLOR(33, ALOG_COLOR_YELLOW);      // 黄色
+DEFINE_ALOG_COLOR(34, ALOG_COLOR_BLUE);        // 蓝色
+DEFINE_ALOG_COLOR(35, ALOG_COLOR_MAGENTA);     // 洋红色
+DEFINE_ALOG_COLOR(36, ALOG_COLOR_CYAN);        // 青色
+DEFINE_ALOG_COLOR(37, ALOG_COLOR_LIGHTGRAY);   // 浅灰色
+DEFINE_ALOG_COLOR(90, ALOG_COLOR_DARKGRAY);    // 深灰色
+DEFINE_ALOG_COLOR(91, ALOG_COLOR_LIGHTRED);    // 浅红色
+DEFINE_ALOG_COLOR(92, ALOG_COLOR_LIGHTGREEN);  // 浅绿色
+DEFINE_ALOG_COLOR(93, ALOG_COLOR_LIGHTYELLOW); // 浅黄色
+DEFINE_ALOG_COLOR(94, ALOG_COLOR_LIGHTBLUE);   // 浅蓝色
+DEFINE_ALOG_COLOR(95, ALOG_COLOR_LIGHTMAGENTA);// 浅洋红色
+DEFINE_ALOG_COLOR(96, ALOG_COLOR_LIGHTCYAN);   // 浅青色
+DEFINE_ALOG_COLOR(97, ALOG_COLOR_LIGHTWHITE);  // 浅白色
+DEFINE_ALOG_COLOR(00, ALOG_COLOR_NOTHING);     // 无颜色
 #undef DEFINE_ALOG_COLOR
 
 
+/**
+ * @brief 日志输出接口
+ * 
+ * ILogOutput是日志输出的抽象接口，定义了日志输出的基本操作
+ * 设计说明：
+ * - 支持全局变量的构造/析构期间使用，通过destruct()方法管理生命周期
+ * - 提供日志级别、颜色、限流等高级功能
+ * - 通过虚函数实现多态，支持多种输出方式
+ */
 class ILogOutput {
 protected:
-    // output object should be destructed via `destruct()`
-    // make alog to used in the construct/destruct of global variables
+    // 输出对象应该通过destruct()方法析构
+    // 使alog可以在全局变量的构造/析构期间使用
     ~ILogOutput() = default;
 
 public:
+    /**
+     * @brief 写入日志
+     * 
+     * 将指定级别的日志内容写入输出设备
+     * 
+     * @param level 日志级别
+     * @param begin 日志内容起始指针
+     * @param end 日志内容结束指针
+     */
     virtual void write(int level, const char* begin, const char* end) = 0;
+    
+    /**
+     * @brief 获取日志文件描述符
+     * 
+     * @return 文件描述符，如果不是文件输出则返回-1
+     */
     virtual int get_log_file_fd() = 0;
+    
+    /**
+     * @brief 设置日志输出限流
+     * 
+     * 限制日志输出速率，防止日志过多影响系统性能
+     * 
+     * @param t 限流值（每秒条数），-1UL表示无限制
+     * @return 之前的限流值
+     */
     virtual uint64_t set_throttle(uint64_t t = -1UL) = 0;
+    
+    /**
+     * @brief 获取当前限流值
+     * 
+     * @return 当前限流值
+     */
     virtual uint64_t get_throttle() = 0;
+    
+    /**
+     * @brief 析构日志输出对象
+     * 
+     * 正确析构日志输出对象，用于全局变量管理
+     */
     virtual void destruct() = 0;
-    virtual int set_level_color(int level, unsigned char code) { return 0; /* ignored by default */ }
+    
+    /**
+     * @brief 设置指定级别的颜色
+     * 
+     * 为指定日志级别设置颜色代码
+     * 
+     * @param level 日志级别
+     * @param code 颜色代码
+     * @return 操作结果，0表示成功
+     */
+    virtual int set_level_color(int level, unsigned char code) { return 0; /* 默认忽略 */ }
+    
+    /**
+     * @brief 预设颜色方案
+     * 
+     * 为不同日志级别预设颜色方案
+     */
     void preset_color();
+    
+    /**
+     * @brief 清除颜色设置
+     * 
+     * 清除所有颜色设置，使用默认输出
+     */
     void clear_color();
 };
 
-extern ILogOutput * const log_output_null;
-extern ILogOutput * const log_output_stderr;
-extern ILogOutput * const log_output_stdout;
+// 预定义的日志输出对象
+extern ILogOutput * const log_output_null;      // 空输出，丢弃所有日志
+extern ILogOutput * const log_output_stderr;    // 标准错误输出
+extern ILogOutput * const log_output_stdout;    // 标准输出
 
+/**
+ * @brief 创建文件日志输出对象
+ * 
+ * 创建一个输出到文件的日志对象，支持日志轮转和限流
+ * 
+ * @param fn 文件名
+ * @param rotate_limit 日志轮转大小限制
+ * @param max_log_files 最大日志文件数
+ * @param throttle 限流值
+ * @param rotate_on_start 是否在开始时立即轮转
+ * @return ILogOutput指针
+ */
 ILogOutput* new_log_output_file(const char* fn, uint64_t rotate_limit = UINT64_MAX, int max_log_files = 10,
                                 uint64_t throttle = -1UL, bool rotate_on_start = false);
+
+/**
+ * @brief 创建文件描述符日志输出对象
+ * 
+ * 创建一个输出到指定文件描述符的日志对象
+ * 
+ * @param fd 文件描述符
+ * @param throttle 限流值
+ * @return ILogOutput指针
+ */
 ILogOutput* new_log_output_file(int fd, uint64_t throttle = -1UL);
+
+/**
+ * @brief 创建异步日志输出对象
+ * 
+ * 创建一个异步日志输出对象，将日志输出到另一个输出对象
+ * 
+ * @param output 目标输出对象
+ * @param num_of_queues 队列数量
+ * @return ILogOutput指针
+ * 
+ * 设计说明：
+ * - 异步输出减少日志写入对主线程的影响
+ * - 使用队列缓存日志，提高吞吐量
+ * - 适用于高并发场景，防止I/O阻塞
+ */
 ILogOutput* new_async_log_output(ILogOutput* output, int num_of_queues = 1);
 
-// old-style log_output_file & log_output_file_close
-// return 0 when successed, -1 for failed
+// 旧式日志输出函数
+// 成功返回0，失败返回-1
 int log_output_file(int fd, uint64_t rotate_limit = UINT64_MAX, uint64_t throttle = -1UL);
 int log_output_file(const char* fn, uint64_t rotate_limit = UINT64_MAX, int max_log_files = 10, uint64_t throttle = -1UL);
 int log_output_file_close();
 
 #ifndef LOG_BUFFER_SIZE
-// size of a temp buffer on stack to format a log, deallocated after output
+// 格式化日志时使用的栈上临时缓冲区大小，使用后即释放
 #define LOG_BUFFER_SIZE 4096
 #endif
 
-// wrapper for an integer, together with format information
+// 整数包装结构体，包含格式信息
 struct ALogInteger
 {
 public:
+    /**
+     * @brief 构造整数包装对象
+     * 
+     * @param x 要包装的整数值
+     * @param shift 位移值，用于指定进制（如16进制为4，8进制为3）
+     * 
+     * 设计说明：
+     * - 通过模板启用SFINAE，仅接受整数类型
+     * - 保存符号性信息，确保正确显示有符号/无符号数
+     * - 支持不同进制的显示（二进制、八进制、十进制、十六进制）
+     */
     template<typename T, ENABLE_IF(std::is_integral<T>::value)>
     ALogInteger(T x, char shift)
     {

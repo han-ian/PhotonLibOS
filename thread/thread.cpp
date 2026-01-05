@@ -2171,48 +2171,78 @@ insert_list:
     }
 
     int vcpu_init(uint64_t flags) {
+        // 定义有效的vCPU标志位，用于验证输入参数
         uint64_t FLAGS = VCPU_ENABLE_ACTIVE_WORK_STEALING |
                          VCPU_ENABLE_PASSIVE_WORK_STEALING;
+        // 检查输入的flags是否包含无效标志，如果有则记录错误并返回
         if (unlikely(flags & ~FLAGS))
             LOG_ERROR_RETURN(EINVAL, -1, "invalid flags ", HEX(flags));
+        // 获取页面大小，如果未初始化则获取系统页面大小
         if (unlikely(PAGE_SIZE == 0))
             PAGE_SIZE = getpagesize();
+        // 创建RunQ实例，检查当前vCPU是否已经初始化
         RunQ rq;
+        // 如果current不为空，表示已经初始化过，重新初始化不会产生副作用
         if (rq.current) return -1;      // re-init has no side-effect
+        // 分配内存用于存储vcpu_t结构体，对齐到64字节以优化缓存性能
         char* ptr = nullptr;
         int err = posix_memalign((void**)&ptr, 64, sizeof(vcpu_t));
         if (unlikely(err))
             LOG_ERROR_RETURN(err, -1, "Failed to allocate vcpu ", ERRNO(err));
 
+        // 创建主协程并将其设置为运行状态
+        // 设计说明：主协程是vCPU的入口点，所有其他协程都从此开始调度
         auto th = *rq.pc = new thread;
         th->vcpu = (vcpu_t*)ptr;
         th->state = states::RUNNING;
+        // 初始化主协程的栈信息，记录原始栈的上下边界
         th->init_main_thread_stack();
+        // 在分配的内存上构造vcpu_t对象，使用过滤后的有效标志
         auto vcpu = new (ptr) vcpu_t(uint8_t(flags & FLAGS));
+        // 创建空闲工作者协程，用于在没有其他任务时保持vCPU运行
+        // 设计说明：空闲工作者确保vCPU始终有任务可执行，同时可以执行维护任务
         vcpu->idle_worker = thread_create(&idler, nullptr);
         thread_enable_join(vcpu->idle_worker);
+        // 更新全局时间戳，确保时间相关功能正常工作
         if_update_now(true);
+        // 增加全局vCPU计数并返回新计数
+        // 设计说明：计数用于跟踪系统中活跃的vCPU数量
         return ++_n_vcpu;
     }
 
     int vcpu_fini() {
+        // 获取当前运行队列，检查vCPU是否已初始化
         RunQ rq;
         if (!rq.current)
             LOG_ERROR_RETURN(ENOSYS, -1, "vcpu not initialized");
 
+        // 获取当前vCPU的指针
         auto vcpu = rq.current->get_vcpu();
+        // 等待当前vCPU上的所有线程完成
+        // 设计说明：确保在清理vCPU之前所有协程都已结束，防止资源访问冲突
         wait_all(rq, vcpu);
+        // 确保除了idle_worker和当前线程外没有其他线程在运行
         assert(!AtomicRunQ(rq).single());
         assert(vcpu->nthreads == 2); // idler & current alive
+        // 释放当前线程的TLS（线程局部存储）资源
         deallocate_tls(&rq.current->tls);
+        // 将vCPU设置为离线状态，防止其他地方访问
         vcpu->go_offline();
-        vcpu->state = states::DONE;  // instruct idle_worker to exit
+        vcpu->state = states::DONE;  // 指示idle_worker退出
+        // 等待并结束空闲工作者协程
+        // 依赖关系：必须在设置DONE状态后进行，确保idle_worker能正确退出
         thread_join(vcpu->idle_worker);
+        // 设置当前线程状态为DONE，准备清理
         rq.current->state = states::DONE;
+        // 删除当前线程对象，释放其资源
         delete rq.current;
+        // 清空运行队列指针，防止后续访问
         *rq.pc = nullptr;
+        // 调用vCPU的析构函数，释放vCPU相关资源
         vcpu->~vcpu_t();
+        // 释放vCPU内存
         free(vcpu);
+        // 减少全局vCPU计数并返回新计数
         return --_n_vcpu;
     }
 
